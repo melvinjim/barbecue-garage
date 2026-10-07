@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Política de seguridad: solo recursos propios + fotos de los hosts listados. Debe coincidir con _headers (hay un test). -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://images.cluvi.com https://images-mini.cluvi.com; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nuestro menú | Barbecue Garage</title>
+    <meta
+      name="description"
+      content="Carta completa de Barbecue Garage: burgers, hot dogs, sandwiches, cortes de carne al carbón, ahumados, cócteles y más, con fotos y detalles de cada plato."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nuestro menú | Barbecue Garage" />
+    <meta property="og:description" content="Mira toda la carta con fotos y detalles de cada plato." />
+    <meta property="og:locale" content="es_CO" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script type="module" src="js/pages/carta.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#carta">Saltar a la carta</a>
+    <header id="site-header" class="site-header"></header>
+
+    <main id="contenido">
+      <div class="container back-row">
+        <a class="back-link" href="index.html">← Volver al inicio</a>
+      </div>
+      <h1 class="sr-only">Nuestro menú</h1>
+
+      <section id="recomendados" class="section" aria-labelledby="rec-title" hidden>
+        <div class="container">
+          <div class="banner">
+            <h2 id="rec-title" class="banner__title">Recomendados</h2>
+          </div>
+          <p class="section__hint">Toca un plato para ver más información.</p>
+          <div id="rec-grid" class="grid grid--feature"></div>
+        </div>
+      </section>
+
+      <section id="carta" class="section menu" aria-labelledby="menu-title">
+        <div class="container section__head">
+          <h2 id="menu-title" class="section__title">La carta</h2>
+        </div>
+        <div id="menu-root">
+          <div class="container"><p class="state">Cargando la carta…</p></div>
+        </div>
+        <noscript>
+          <div class="container">
+            <p class="state state--error">Para ver la carta necesitas activar JavaScript en tu navegador.</p>
+          </div>
+        </noscript>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </body>
+</html>

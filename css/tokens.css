@@ -1,0 +1,49 @@
+/* Paleta y medidas de la marca (negros, grises y el rojo de Barbecue Garage). */
+:root {
+  color-scheme: dark;
+
+  /* Negros y grises: el fondo de la página es gris (como el sitio original) y las tarjetas, negras. */
+  --black: #000000;
+  --grey-bg: #383838; /* fondo de página (el mismo gris de la imagen de patrón) */
+  --grey-bar: rgba(40, 40, 40, 0.94); /* barras pegajosas sobre el fondo gris */
+  --surface: #0a0a0a;
+  --surface-2: #161616;
+  --surface-3: #222222;
+  --line: #262626;
+  --line-strong: #4a4a4a;
+
+  /* Texto */
+  --text: #f5f5f5;
+  --text-dim: #d2d2d2;
+  --muted: #bcbcbc;
+
+  /* Rojo de marca (#da2928 es el del sitio original) */
+  --red: #da2928;
+  --red-hover: #ef3b39;
+  --red-deep: #8f1514;
+  --red-text: #ff5a57; /* rojo legible sobre negro (contraste 6.8:1) */
+
+  /* Tipografía: se usan fuentes del sistema (rápido y sin terceros). */
+  --font-body: 'Poppins', 'Roboto', system-ui, -apple-system, 'Segoe UI', Arial, sans-serif;
+  --font-display: Impact, 'Haettenschweiler', 'Roboto Condensed', 'Arial Narrow Bold', 'Arial Narrow', sans-serif;
+
+  /* Medidas */
+  --radius-s: 8px;
+  --radius: 14px;
+  --container: 1120px;
+  --gutter: 16px;
+  --header-h: 58px;
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+
+  /* El encabezado queda fijo arriba en todas las pantallas; lo que se pega debajo parte de aquí.
+     --bar-h (barra de búsqueda y categorías) lo actualiza menu.js. */
+  --sticky-top: var(--header-h);
+  --bar-h: 112px;
+}
+
+@media (min-width: 720px) {
+  :root {
+    --gutter: 24px;
+    --header-h: 66px;
+  }
+}

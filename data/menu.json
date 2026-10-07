@@ -1,0 +1,1863 @@
+{
+  "categories": [
+    {
+      "id": "entradas",
+      "name": "Let's Start",
+      "subtitle": "Entradas",
+      "banner": "https://images-mini.cluvi.com/xwEAfkuqqI/w_768_xwEAfkuqqI_barbecue-garage_mesa-de-trabajo-1-copia-8.png"
+    },
+    {
+      "id": "compartir",
+      "name": "To Share",
+      "subtitle": "Para compartir"
+    },
+    {
+      "id": "lunch",
+      "name": "Lunch",
+      "subtitle": "Almuerzos",
+      "note": "Disponible hasta las 4:00 pm",
+      "banner": "https://images-mini.cluvi.com/Jm97XZr6KD/w_768_Jm97XZr6KD_mesa-de-trabajo-1-copia-22-8.png"
+    },
+    {
+      "id": "arroces",
+      "name": "Rice",
+      "subtitle": "Arroces",
+      "banner": "https://images-mini.cluvi.com/1cvU4nKXuj/w_768_1cvU4nKXuj_mesa-de-trabajo-1-copia-24.png"
+    },
+    {
+      "id": "carnes",
+      "name": "Meats",
+      "subtitle": "Cortes de carne",
+      "banner": "https://images-mini.cluvi.com/pBiP7D9kru/w_768_pBiP7D9kru_mesa-de-trabajo-1-copia-23.png"
+    },
+    {
+      "id": "burgers",
+      "name": "Burgers",
+      "banner": "https://images-mini.cluvi.com/An1AloEy3Y/w_768_An1AloEy3Y_barbecue-garage_mesa-de-trabajo-1-copia-4.png"
+    },
+    {
+      "id": "sandwiches",
+      "name": "Sandwiches",
+      "banner": "https://images-mini.cluvi.com/T9WxSS0qks/w_768_T9WxSS0qks_barbecue-garage_mesa-de-trabajo-1-copia-13.png"
+    },
+    {
+      "id": "hotdogs",
+      "name": "Hot Dogs",
+      "banner": "https://images-mini.cluvi.com/AvrAAaMghZ/w_768_AvrAAaMghZ_barbecue-garage_mesa-de-trabajo-1-copia-10.png"
+    },
+    {
+      "id": "kids",
+      "name": "Kids Menu",
+      "subtitle": "Menú infantil",
+      "banner": "https://images-mini.cluvi.com/64aGsHBGU0/w_768_64aGsHBGU0_barbecue-garage_mesa-de-trabajo-1-copia-11.png"
+    },
+    {
+      "id": "postres",
+      "name": "Desserts",
+      "subtitle": "Postres",
+      "banner": "https://images-mini.cluvi.com/Cx0VZrvdY9/w_768_Cx0VZrvdY9_barbecue-garage_mesa-de-trabajo-1-copia-12.png"
+    },
+    {
+      "id": "bebidas",
+      "name": "Drinks",
+      "subtitle": "Bebidas",
+      "banner": "https://images-mini.cluvi.com/n6iOtvOOu8/w_768_n6iOtvOOu8_barbecue-garage_mesa-de-trabajo-1-copia-7.png"
+    },
+    {
+      "id": "cervezas",
+      "name": "Beers",
+      "subtitle": "Cervezas",
+      "banner": "https://images-mini.cluvi.com/oz0RWm8RXI/w_768_oz0RWm8RXI_barbecue-garage_mesa-de-trabajo-1-copia-3.png"
+    },
+    {
+      "id": "cocktails",
+      "name": "Cocktails",
+      "subtitle": "Cócteles",
+      "banner": "https://images-mini.cluvi.com/KK7cCA4gIz/w_768_KK7cCA4gIz_barbecue-garage_mesa-de-trabajo-1-copia-6.png"
+    },
+    {
+      "id": "licores",
+      "name": "Licores",
+      "subtitle": "Botellas",
+      "banner": "https://images-mini.cluvi.com/GsBuUJbBNK/w_768_GsBuUJbBNK_mesa-de-trabajo-1-copia-10.png"
+    },
+    {
+      "id": "extras",
+      "name": "Extras",
+      "subtitle": "Adicionales",
+      "banner": "https://images-mini.cluvi.com/vMrkRyt9Nt/w_768_vMrkRyt9Nt_barbecue-garage_mesa-de-trabajo-1-copia-9.png"
+    }
+  ],
+  "recommended": [
+    "pulled-pork-hotdogs",
+    "brisket-sandwich",
+    "brisket-burger",
+    "smoked-alitas",
+    "asian-chicken-crispy-rice",
+    "thai-rice"
+  ],
+  "products": [
+    {
+      "id": "palitos-de-queso",
+      "categories": [
+        "entradas"
+      ],
+      "name": "PALITOS DE QUESO",
+      "price": 18900,
+      "image": "https://images.cluvi.com/jbj6NjkOEZ/w_576_jbj6NjkOEZ_whatsapp-image-2026-06-23-at-11-45-59.jpeg"
+    },
+    {
+      "id": "empanaditas-de-chilli",
+      "categories": [
+        "entradas",
+        "compartir"
+      ],
+      "name": "EMPANADITAS DE CHILLI",
+      "price": 18900,
+      "description": "Empanaditas de chilli (mezcla de carnes ligeramente picante) acompañadas con nuestra salsa de la casa",
+      "image": "https://images.cluvi.com/vGZnFQVfae/w_576_vGZnFQVfae_whatsapp-image-2026-06-23-at-11-44-29.jpeg"
+    },
+    {
+      "id": "empanaditas-de-pulled-pork",
+      "categories": [
+        "entradas",
+        "compartir"
+      ],
+      "name": "EMPANADITAS DE PULLED PORK",
+      "price": 18900,
+      "description": "Empanaditas de pulled pork (pulled pork ahumado por 12 horas), mezcla de quesos acompañada con pico de gallo",
+      "image": "https://images.cluvi.com/eDAXM8WPjw/w_576_eDAXM8WPjw_whatsapp-image-2026-06-23-at-11-44-43.jpeg"
+    },
+    {
+      "id": "empanaditas-de-brisket",
+      "categories": [
+        "entradas",
+        "compartir"
+      ],
+      "name": "EMPANADITAS DE BRISKET",
+      "price": 19900,
+      "description": "Empanaditas de brisket (pecho de res ahumado por 16 hrs), mezcla de quesos acompañadas con salsa cítrica",
+      "image": "https://images.cluvi.com/2UPWtZty0t/w_576_2UPWtZty0t_whatsapp-image-2026-06-23-at-11-45-01.jpeg"
+    },
+    {
+      "id": "bacon-fries",
+      "categories": [
+        "entradas"
+      ],
+      "name": "BACON FRIES",
+      "price": 20900,
+      "description": "Papas francesas bañadas en salsa de la casa, queso costeño y polvo de tocineta.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/FVq98a47pt/w_576_FVq98a47pt_7b6miyfyha_bacon-fries.jpg"
+    },
+    {
+      "id": "smoked-alitas",
+      "categories": [
+        "entradas"
+      ],
+      "name": "SMOKED ALITAS",
+      "price": 22900,
+      "description": "Alitas de pollo (ligeramente picantes) ahumadas por 3 hrs, adobadas con nuestro rub al mejor estilo texano, salsas BBQ y texas hot.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/C0rQxkkIa6/w_576_C0rQxkkIa6_xseq8bd8qn_smoked-alitas.jpg"
+    },
+    {
+      "id": "onion-rings",
+      "categories": [
+        "entradas"
+      ],
+      "name": "ONION RINGS",
+      "price": 22900,
+      "description": "Aros de cebolla, acompañados de salsa alioli.",
+      "units": "10 unds.",
+      "image": "https://images-mini.cluvi.com/5GLa5e5BrK/w_576_5GLa5e5BrK_rqps35jm5q_onion-rings.jpg"
+    },
+    {
+      "id": "mazorca-garage",
+      "categories": [
+        "entradas"
+      ],
+      "name": "MAZORCA GARAGE",
+      "price": 22900,
+      "description": "Mazorca dulce al carbón, bañada en salsa de la casa, queso costeño y polvo de tocineta.",
+      "image": "https://images.cluvi.com/bUp86LNTgD/w_576_bUp86LNTgD_img_0506.jpg"
+    },
+    {
+      "id": "tacos-de-chili-2",
+      "categories": [
+        "entradas"
+      ],
+      "name": "TACOS DE CHILI (2)",
+      "price": 22900,
+      "description": "Tortilla de maíz, chili de carne, queso monterrey gratinado, salsa mojo rojo, cebolla fresca y cilantro.",
+      "units": "2 unds.",
+      "image": "https://images.cluvi.com/CX5P6mMlrA/w_576_CX5P6mMlrA_dsc06895.jpg"
+    },
+    {
+      "id": "tacos-de-chicharron-2",
+      "categories": [
+        "entradas"
+      ],
+      "name": "TACOS DE CHICHARRÓN (2)",
+      "price": 22900,
+      "description": "Tortilla de maíz, crujiente chicharrón de cerdo, salsa cítrica, guacamole, cebolla encurtida y cilantro",
+      "units": "2 unds.",
+      "image": "https://images.cluvi.com/UfCgJjhGDk/w_576_UfCgJjhGDk_dsc06938.jpg"
+    },
+    {
+      "id": "tacos-de-brisket-2",
+      "categories": [
+        "entradas"
+      ],
+      "name": "TACOS DE BRISKET (2)",
+      "price": 22900,
+      "description": "Tortilla de maíz, pecho de res ahumado por 16 hrs, cebolla, cilantro fresco y salsa cheddar.",
+      "units": "2 unds.",
+      "image": "https://images-mini.cluvi.com/1wfLWS4wfW/w_576_1wfLWS4wfW_brisket-tacos.jpg"
+    },
+    {
+      "id": "tacos-de-pulled-pork-2",
+      "categories": [
+        "entradas"
+      ],
+      "name": "TACOS DE PULLED PORK (2)",
+      "price": 22900,
+      "description": "Tortilla de maíz, pulled pork ahumado por 12 horas, mayonesa de cilantro y cebolla encurtida.",
+      "units": "2 unds.",
+      "image": "https://images.cluvi.com/cnSmgZhXV1/w_576_cnSmgZhXV1_dsc06930.jpg"
+    },
+    {
+      "id": "chori-fries",
+      "categories": [
+        "entradas"
+      ],
+      "name": "CHORI FRIES",
+      "price": 26900,
+      "description": "Papas francesas bañadas en queso mozzarella, chorizo ahumado, pico de gallo y salsa alioli.",
+      "image": "https://images-mini.cluvi.com/UwuHmCTGEn/w_576_UwuHmCTGEn_i5sqojndkb_chori-fries.jpg"
+    },
+    {
+      "id": "smoked-chorizos",
+      "categories": [
+        "entradas"
+      ],
+      "name": "SMOKED CHORIZOS",
+      "price": 25900,
+      "description": "Chorizo argentino y antioqueño ahumados y asados al carbón, acompañados de papas cascos y chimichurri.",
+      "image": "https://images.cluvi.com/7eelfGZ7GL/w_576_7eelfGZ7GL_smoked-chorizos.jpg"
+    },
+    {
+      "id": "quesabirria-2",
+      "categories": [
+        "entradas"
+      ],
+      "name": "QUESABIRRIA (2)",
+      "price": 26900,
+      "description": "Tortilla de maíz artesanal rellena de birria (pecho de res cocida en su propio jugo) ligeramente picante, acompañada de queso mozzarella fundido, cebolla finamente picada y hojas frescas de cilantro.\n\nSe aconseja remojar en el caldo de cocción intenso y picantoso que realza cada bocado.",
+      "image": "https://images.cluvi.com/8YKaIC9G0T/w_576_8YKaIC9G0T_dsc02488.jpg"
+    },
+    {
+      "id": "nachos-chili",
+      "categories": [
+        "entradas"
+      ],
+      "name": "NACHOS CHILI",
+      "price": 27900,
+      "description": "Nachos de maíz, chili de carne (ligeramente picante) guacamole, pico de gallo, mix de quesos, cebollitas encurtidas y cilantro.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/Wx1x8unn5v/w_576_Wx1x8unn5v_nachos-chili.jpg"
+    },
+    {
+      "id": "nachos-garage",
+      "categories": [
+        "entradas"
+      ],
+      "name": "NACHOS GARAGE",
+      "price": 28900,
+      "description": "Nachos de maíz, pulled pork ahumado por 8 hrs, mezcla de quesos gratinados, pico de gallo y guacamole.",
+      "image": "https://images-mini.cluvi.com/JRzD8lKURG/w_576_JRzD8lKURG_lruswbnpat_nachos-garage.jpg"
+    },
+    {
+      "id": "picada-de-chicharron",
+      "categories": [
+        "entradas"
+      ],
+      "name": "PICADA DE CHICHARRÓN",
+      "price": 29900,
+      "description": "Panceta de cerdo acompañada con bollo quesudo artesanal, coronado con cebollitas acevichadas y limón.",
+      "image": "https://images-mini.cluvi.com/j5d8nDFNXg/w_576_j5d8nDFNXg_img_8213.jpeg"
+    },
+    {
+      "id": "mix-de-tacos",
+      "categories": [
+        "entradas",
+        "compartir"
+      ],
+      "name": "MIX DE TACOS",
+      "price": 33900,
+      "includes": [
+        "Chili Taco",
+        "Brisket Taco",
+        "Pulled Pork Taco"
+      ],
+      "units": "3 unds.",
+      "image": "https://images-mini.cluvi.com/TmFWSKx0xX/w_576_TmFWSKx0xX_mix-de-tacos.JPG"
+    },
+    {
+      "id": "esquite-garage",
+      "categories": [
+        "entradas"
+      ],
+      "name": "ESQUITE GARAGE",
+      "price": 32900,
+      "description": "Maíz desgranado salteado con sourcream compuesto (ligeramente picante), queso costeño fresco, topping de tocineta, cebolla roja finamente picada, cilantro fresco y pechuga de pollo ahumada x 5 horas a leña.",
+      "image": "https://images.cluvi.com/ONzQ7owEbR/w_576_ONzQ7owEbR_esquite-garage.jpg"
+    },
+    {
+      "id": "choripan",
+      "categories": [
+        "entradas",
+        "sandwiches"
+      ],
+      "name": "CHORIPAN",
+      "price": 34900,
+      "description": "Chorizo argentino asado al carbón, salsa alioli, queso mozzarella fundido, chimichurri argentino, pan artesanal y acompañado de papitas a la francesa.",
+      "image": "https://images-mini.cluvi.com/LLt65Ot7gG/w_576_LLt65Ot7gG_img_8223.jpg"
+    },
+    {
+      "id": "trio-miniburgers",
+      "categories": [
+        "entradas",
+        "compartir"
+      ],
+      "name": "TRÍO MINIBURGERS",
+      "price": 36900,
+      "description": "Mini sweet, mini onion y mini chicken crispy.",
+      "image": "https://images-mini.cluvi.com/wmef4JJciq/w_576_wmef4JJciq_gdoarbyjah_trio-miniburgers.jpg"
+    },
+    {
+      "id": "smoked-alitas-12",
+      "categories": [
+        "compartir"
+      ],
+      "name": "SMOKED ALITAS (12)",
+      "price": 34900,
+      "description": "Alitas de pollo (ligeramente picantes) ahumadas por 3 hrs, adobadas con nuestro rub al mejor estilo texano, acompañada de salsa BBQ o texas hot.",
+      "featured": true,
+      "image": "https://images.cluvi.com/ALgeN4mGj1/w_576_ALgeN4mGj1_dsc07069.jpg"
+    },
+    {
+      "id": "loaded-fries",
+      "categories": [
+        "compartir"
+      ],
+      "name": "LOADED FRIES",
+      "price": 36900,
+      "description": "Deliciosas papas a la francesa con doble cobertura, lomo fino asado al carbón, pechuga asada al carbón, chorizo argentino ahumado, queso costeño, lechuga romana fresca, chongo artesanal, polvo de tocineta, salsa alioli y nuestra salsa de la casa",
+      "launch": true,
+      "image": "https://images.cluvi.com/SUEbVKoQfJ/w_576_SUEbVKoQfJ_dsc02431.jpg"
+    },
+    {
+      "id": "brisket-mac-cheese",
+      "categories": [
+        "compartir"
+      ],
+      "name": "BRISKET MAC & CHEESE",
+      "price": 41900,
+      "description": "Mac & cheese acompañado de nuestro Brisket ahumado y topping de tocineta",
+      "image": "https://images-mini.cluvi.com/r8P5EUlugN/w_576_r8P5EUlugN_mac-cheese.jpg"
+    },
+    {
+      "id": "la-titular",
+      "categories": [
+        "compartir"
+      ],
+      "name": "LA TITULAR",
+      "price": 72900,
+      "image": "https://images.cluvi.com/mH9MrLvPLf/w_576_mH9MrLvPLf_whatsapp-image-2026-06-17-at-19-31-39.jpeg"
+    },
+    {
+      "id": "pa-empezar",
+      "categories": [
+        "compartir"
+      ],
+      "name": "PA' EMPEZAR",
+      "price": 76900,
+      "image": "https://images.cluvi.com/poVJFh5Lwa/w_576_poVJFh5Lwa_whatsapp-image-2026-06-17-at-19-31-30.jpeg"
+    },
+    {
+      "id": "la-smoke",
+      "categories": [
+        "compartir"
+      ],
+      "name": "LA SMOKE",
+      "price": 129900,
+      "image": "https://images.cluvi.com/wNynMDApm3/w_576_wNynMDApm3_whatsapp-image-2026-06-17-at-19-31-21.jpeg"
+    },
+    {
+      "id": "lunch-de-pechuga",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH DE PECHUGA",
+      "price": 30900,
+      "description": "Arroz de cebolla ligeramente dulce, chips de plátano verde, ensalada fresca con vinagreta de la casa, porción de aguacate, merengue de mayo cítricos y pechuga de pollo a la parrilla.",
+      "availability": "De 12:00 pm a 4:00 pm",
+      "image": "https://images-mini.cluvi.com/SMDp4yAYDV/w_576_SMDp4yAYDV_img_8207.jpg"
+    },
+    {
+      "id": "lunch-de-chicharron-pulled-pork",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH DE CHICHARRÓN & PULLED PORK",
+      "price": 30900,
+      "description": "Chicharrón, pulled pork, yuquitas fritas, salsa de mayocilantro, arroz de cilantro, pico de gallo y guacamole",
+      "availability": "De 12:00 pm a 4:00 pm todos los días",
+      "image": "https://images-mini.cluvi.com/TzNZwbp2uW/w_576_TzNZwbp2uW_img_8209.jpg"
+    },
+    {
+      "id": "lunch-punta-de-anca-de-cerdo",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH PUNTA DE ANCA DE CERDO",
+      "price": 30900,
+      "description": "Arroz de cebolla ligeramente dulce, chips de plátano verde, ensalada fresca con vinagreta de la casa, porción de aguacate, merengue de mayo cítricos y punta de anca de cerdo a la parrilla.",
+      "availability": "De 12:00 pm a 4:00 pm",
+      "image": "https://images-mini.cluvi.com/NY3bg3JgaW/w_576_NY3bg3JgaW_img_8218.jpg"
+    },
+    {
+      "id": "lunch-posta-negra-colombian-style-black-beef",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH POSTA NEGRA (COLOMBIAN STYLE BLACK BEEF)",
+      "price": 32900,
+      "description": "Arroz salteado al wok con aceite de ajo y cilantro, acompañada de una deliciosa posta de carne al estilo cartagenera, chips de plátanos y ensalada de lechuga romana, tomates Cherry y aguacate, sobre una salsa de mayonesa cítrica y queso parmesano.",
+      "availability": "De 12:00 pm a 4:00 pm",
+      "image": "https://images.cluvi.com/p9jTpj5eYU/w_576_p9jTpj5eYU_img_2066.jpg"
+    },
+    {
+      "id": "lunch-de-bistec",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH DE BISTEC",
+      "price": 32900,
+      "description": "Lomo fino con cebolla y salsa de mojo rojo, arroz de cilantro, chips de plátano verde, pico de gallo y guacamole",
+      "availability": "De 12:00 pm a 4:00 pm todos los días",
+      "image": "https://images.cluvi.com/K14ga6nz9J/w_576_K14ga6nz9J_dsc02449.jpg"
+    },
+    {
+      "id": "lomo-saltado-barbecue",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LOMO SALTADO BARBECUE",
+      "price": 33900,
+      "description": "Delicioso lomo fino, cascos de papa, tomate y cebollas rojas salteados con fondo de carne, acompañado de arroz de cilantro y aguacate.",
+      "availability": "De 12:00 pm a 4:00 pm",
+      "image": "https://images-mini.cluvi.com/UGiXFAygwC/w_576_UGiXFAygwC_img_8206.jpg"
+    },
+    {
+      "id": "arroz-salteado-de-pollo-y-char-siu",
+      "categories": [
+        "lunch"
+      ],
+      "name": "ARROZ SALTEADO DE POLLO Y CHAR SIU",
+      "price": 34900,
+      "description": "Arroz salteado al wok estilo oriental con pechuga de pollo y char siu (cerdo ahumado agridulce) vegetales, semillas de ajonjolí, coronado con wonton frito",
+      "availability": "De viernes a domingo de 12:00 pm hasta las 4:00 pm",
+      "image": "https://images.cluvi.com/N4bMyq2Qpo/w_576_N4bMyq2Qpo_whatsapp-image-2026-06-23-at-11-42-49.jpeg"
+    },
+    {
+      "id": "asian-chicken-crispy-rice",
+      "categories": [
+        "lunch"
+      ],
+      "name": "ASIAN CHICKEN CRISPY RICE",
+      "price": 35900,
+      "description": "Arroz salteado al wok estilo oriental con bondiola de cerdo ahumada y vegetales, pechuga de pollo apanada sumergida en glasé asiático, acompañado con ensalada de lechuga romana y tomates cherry, sobre salsa de mayonesa cítrica y queso parmesano.",
+      "availability": "De 12:00 pm a 4:00 pm",
+      "image": "https://images-mini.cluvi.com/yuGkb0Gr0t/w_576_yuGkb0Gr0t_img_8215.jpg"
+    },
+    {
+      "id": "lunch-baby-beef-pastas-del-chef",
+      "categories": [
+        "lunch"
+      ],
+      "name": "LUNCH BABY BEEF + PASTAS DEL CHEF",
+      "price": 34900,
+      "description": "150 gr de lomo fino de res asado al carbón, acompañado con pasta penne en salsa del chef y tostada de pan baguette sellada en mantequilla de ajo.",
+      "availability": "De 12:00 pm hasta las 4:00 pm",
+      "image": "https://images.cluvi.com/ZISHF2AzQY/w_576_ZISHF2AzQY_dsc02396.jpg"
+    },
+    {
+      "id": "garage-salad",
+      "categories": [
+        "arroces"
+      ],
+      "name": "GARAGE SALAD",
+      "price": 37900,
+      "description": "Lechuga romana fresca, vinagreta de ajo asado, balsámico y vinagre de manzanas, Praliné de almendras crocantes y parmesano. Acompañado de 180 GR pechuga de pollo ahumada en leña.",
+      "image": "https://images-mini.cluvi.com/9tIYx483dX/w_576_9tIYx483dX_garage-salad.PNG"
+    },
+    {
+      "id": "smoked-garage-rice",
+      "categories": [
+        "arroces"
+      ],
+      "name": "SMOKED GARAGE RICE",
+      "price": 47900,
+      "description": "Arroz salteado con vegetales, bondiola de cerdo ahumada, chorizo argentino, pechuga de pollo, acompañado de costilla de cerdo ahumada y alita de pollo ahumada.",
+      "image": "https://images.cluvi.com/79EOZz1ABO/w_576_79EOZz1ABO_dsc02249.jpg"
+    },
+    {
+      "id": "thai-rice",
+      "categories": [
+        "arroces"
+      ],
+      "name": "THAI RICE",
+      "price": 49900,
+      "description": "Arroz estilo oriental a base de guisantes y soya, lomo fino de res, chorizo argentino ahumado, pork belly ahumado, cebolla acevichada y cebollín.",
+      "image": "https://images-mini.cluvi.com/OakuZyQrPt/w_576_OakuZyQrPt_arroz-thai.JPG"
+    },
+    {
+      "id": "chicken-breast",
+      "categories": [
+        "carnes"
+      ],
+      "name": "CHICKEN BREAST",
+      "price": 38900,
+      "description": "300 gramos de filete de pechuga asada al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images.cluvi.com/MzKAKBLijk/w_576_MzKAKBLijk_dsc02323.jpg"
+    },
+    {
+      "id": "smoked-chicken-thigh",
+      "categories": [
+        "carnes"
+      ],
+      "name": "SMOKED CHICKEN THIGH",
+      "price": 38900,
+      "description": "Contramuslo de pollo ahumado en leña por 4 horas, sazonado con nuestro rub especial de pollo, papas casco rebosadas en mantequilla de ajo y parmesano, acompañados de nuestra salsa bbq blanca estilo Alabama y nuestra bbq tradicional.",
+      "image": "https://images.cluvi.com/l9elrk7ZC1/w_576_l9elrk7ZC1_dsc00217.jpg"
+    },
+    {
+      "id": "chicken-breast-pastas-del-chef",
+      "categories": [
+        "carnes"
+      ],
+      "name": "CHICKEN BREAST + PASTAS DEL CHEF",
+      "price": 43900,
+      "description": "300 gramos de filete de pechuga asada al carbón.\n\nAcompañada con pasta penne en salsa del chef y tostada de pan baguette sellada en mantequilla de ajo.",
+      "image": "https://images.cluvi.com/ZAAjpAIAiq/w_576_ZAAjpAIAiq_pechuga-mas-pasta.jpg"
+    },
+    {
+      "id": "smoked-chicken-breast-pastas-del-chef",
+      "categories": [
+        "carnes"
+      ],
+      "name": "SMOKED CHICKEN BREAST + PASTAS DEL CHEF",
+      "price": 41900,
+      "description": "Pechuga de pollo ahumada en cocción lenta por 5 horas sazonada con nuestro rub de la casa tradicional logrando una textura suave y jugosa\n\nAcompañada con pasta penne en salsa del chef y tostada de pan baguette sellada en mantequilla de ajo.",
+      "image": "https://images.cluvi.com/dxHAU1dSvY/w_576_dxHAU1dSvY_dsc02367.jpg"
+    },
+    {
+      "id": "asian-chicken-crispy-pasta-del-chef",
+      "categories": [
+        "carnes"
+      ],
+      "name": "ASIAN CHICKEN CRISPY + PASTA DEL CHEF",
+      "price": 40900,
+      "description": "150 gramos de pechuga de pollo apanada, sumergida en nuestro glasé asiático, acompañado con pasta penne en salsa del chef y tostada de pan baguette sellada en mantequilla de ajo.",
+      "image": "https://images.cluvi.com/o6DFwZswsQ/w_576_o6DFwZswsQ_dsc00226.jpg"
+    },
+    {
+      "id": "punta-de-anca-de-cerdo",
+      "categories": [
+        "carnes"
+      ],
+      "name": "PUNTA DE ANCA DE CERDO",
+      "price": 41900,
+      "description": "300 gramos de punta de anca asada al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images-mini.cluvi.com/3O8OJP7agO/w_576_3O8OJP7agO_cyhntswdv7_punta-de-anca-de-cerdo.jpg"
+    },
+    {
+      "id": "baby-beef",
+      "categories": [
+        "carnes"
+      ],
+      "name": "BABY BEEF",
+      "price": 51900,
+      "description": "300 gramos de lomo de res premium al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images.cluvi.com/kBV7jbAuJ0/w_576_kBV7jbAuJ0_dsc02306.jpg"
+    },
+    {
+      "id": "baby-back-ribs",
+      "categories": [
+        "carnes"
+      ],
+      "name": "BABY BACK RIBS",
+      "price": 52900,
+      "description": "300 gramos de costillas ahumadas durante 8 horas bañadas en salsa BBQ.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/skDIvtFF4d/w_576_skDIvtFF4d_6gbndm5w9k_baby-back-ribs.png"
+    },
+    {
+      "id": "bife-de-chorizo",
+      "categories": [
+        "carnes"
+      ],
+      "name": "BIFE DE CHORIZO",
+      "price": 52900,
+      "description": "300 gramos de carne de res premium al carbón, corte grueso y jugoso.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images.cluvi.com/394Edtuc0G/w_576_394Edtuc0G_dsc02297.jpg"
+    },
+    {
+      "id": "baby-beef-pastas-del-chef",
+      "categories": [
+        "carnes"
+      ],
+      "name": "BABY BEEF + PASTAS DEL CHEF",
+      "price": 58900,
+      "description": "300 gr de lomo fino de res asado al carbón, acompañado con pasta penne en salsa del chef y tostada de pan baguette sellada en mantequilla de ajo.",
+      "image": "https://images.cluvi.com/ZISHF2AzQY/w_576_ZISHF2AzQY_dsc02396.jpg"
+    },
+    {
+      "id": "picanha",
+      "categories": [
+        "carnes"
+      ],
+      "name": "PICANHA",
+      "price": 81900,
+      "description": "300 gramos de punta de anca de res importada asada al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/99LIuCTTjJ/w_576_99LIuCTTjJ_ins03560.jpg"
+    },
+    {
+      "id": "new-york",
+      "categories": [
+        "carnes"
+      ],
+      "name": "NEW YORK",
+      "price": 95900,
+      "description": "300 gramos de New York al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images-mini.cluvi.com/zQmhyxiWiZ/w_576_zQmhyxiWiZ_new-york.PNG"
+    },
+    {
+      "id": "rib-eye",
+      "categories": [
+        "carnes"
+      ],
+      "name": "RIB EYE",
+      "price": 101900,
+      "description": "300 gramos de Rib Eye al carbón.",
+      "note": "Todas nuestras carnes vienen acompañadas de papas casco y ensalada fresca.",
+      "image": "https://images-mini.cluvi.com/svZRj51Hbj/w_576_svZRj51Hbj_rib-eye.PNG"
+    },
+    {
+      "id": "chicken-crispy",
+      "categories": [
+        "burgers"
+      ],
+      "name": "CHICKEN CRISPY",
+      "price": 34900,
+      "description": "150 gramos de filete de pechuga de pollo apanado crispy, queso americano fundido, tocineta, lechuga romana bañada en mayonesa cítrica y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/5naVEfxH3y/w_576_5naVEfxH3y_hgk3nqgr2x_chicken-crispy.jpg"
+    },
+    {
+      "id": "classic-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "CLASSIC BURGER",
+      "price": 34900,
+      "description": "150 gramos de carne premium al carbón, queso americano fundido, lechuga romana, tomate, cebolla, pepinillos, salsa clásica, tocineta y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/pfCvAaWNfe/w_576_pfCvAaWNfe_classic-burger.PNG"
+    },
+    {
+      "id": "bacon-cheese",
+      "categories": [
+        "burgers"
+      ],
+      "name": "BACON CHEESE",
+      "price": 35900,
+      "description": "150 gramos de carne premium al carbón, doble queso americano fundido, doble tocineta, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/IEhFCcyWlU/w_576_IEhFCcyWlU_qcyyrdgd2c_bacon-cheese.jpg"
+    },
+    {
+      "id": "bacon-bbq",
+      "categories": [
+        "burgers"
+      ],
+      "name": "BACON BBQ",
+      "price": 36900,
+      "description": "150 gramos de carne premium al carbón, queso americano fundido, cebolla crispy, tocineta bañada en salsa BBQ, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/2wJtIf2nN0/w_576_2wJtIf2nN0_vx4nrvpo0g_bacon-bbq.jpg"
+    },
+    {
+      "id": "sweet-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "SWEET BURGER",
+      "price": 37900,
+      "description": "150 gramos de carne premium al carbón, queso americano fundido, mayosiracha (picante suave), cebolla caramelizada, tocineta, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/o3iy1i9aSU/w_576_o3iy1i9aSU_iwyzcbzdxn_sweet-burger.jpg"
+    },
+    {
+      "id": "gaucha-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "GAUCHA BURGER",
+      "price": 37900,
+      "description": "150 gramos de carne premium al carbón, queso mozzarella, chorizo argentino, chimichurri hecho en casa, salsa alioli y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/ssYi3SJBYQ/w_576_ssYi3SJBYQ_owzqvd1yrn_gaucha-burger.jpg"
+    },
+    {
+      "id": "onion-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "ONION BURGER",
+      "price": 39900,
+      "description": "150 gramos de carne premium al carbón, queso americano fundido, tocineta, aros de cebolla bañados en salsa alioli, lechuga romana, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/bGIHSkj10T/w_576_bGIHSkj10T_mm2tiiglms_onion-burger.jpg"
+    },
+    {
+      "id": "sweet-cheese",
+      "categories": [
+        "burgers"
+      ],
+      "name": "SWEET CHEESE",
+      "price": 39900,
+      "description": "150 gramos de carne premium al carbón, queso americano fundido, queso costeño apanado crispy, cebolla caramelizada, tocineta, mayo ahumada y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/bmVD6qISmy/w_576_bmVD6qISmy_fgoxhujsrh_sweet-cheese.jpg"
+    },
+    {
+      "id": "pulled-bacon",
+      "categories": [
+        "burgers"
+      ],
+      "name": "PULLED BACON",
+      "price": 40900,
+      "description": "150 gramos de carne premium asada al carbón, queso cheddar fundido, lechuga romana fresca, nuestra mezcla de pulled pork ahumado y mermelada de tocineta ahumada, chongo artesanal, salsa mayo chipotle (ligeramente picante), salsa de la casa y nuestro pan artellano.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "launch": true,
+      "image": "https://images.cluvi.com/PY8JJzfFzX/w_576_PY8JJzfFzX_dsc02452.jpg"
+    },
+    {
+      "id": "meat-rib",
+      "categories": [
+        "burgers"
+      ],
+      "name": "MEAT & RIB",
+      "price": 41900,
+      "description": "150 gramos carne premium al carbón, 100gr de baby ribs desmenuzada bañada en salsa BBQ, salsa alioli y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/bWQaNwF5f0/w_576_bWQaNwF5f0_meat-rib.jpg"
+    },
+    {
+      "id": "coffee-bacon",
+      "categories": [
+        "burgers"
+      ],
+      "name": "COFFEE BACON",
+      "price": 41900,
+      "description": "Jugosa carne premium asada al carbón, nuestra creación única de mermelada de bacon ahumado en reducción de café, queso cheddar fundido, lechuga romana fresca, queso costeño apanado con Panko, exquisita mayonesa ahumada y nuestro pan artellano.",
+      "award": "Ganadora Burger Master 2024",
+      "featured": true,
+      "image": "https://images.cluvi.com/qXU3bE9Klw/w_576_qXU3bE9Klw_whatsapp-image-2024-04-19-at-5-25-50-pm.jpeg"
+    },
+    {
+      "id": "la-gringa",
+      "categories": [
+        "burgers"
+      ],
+      "name": "LA GRINGA",
+      "price": 41900,
+      "description": "150 gramos de carne premium al carbón, queso mozzarella, mayochipotle, tomate y lechuga romana frescos, chili de res, cebolla caramelizada y cebolla crispy y nuestro pan artesanal.",
+      "award": "Participante BurgerJamFest 2024",
+      "image": "https://images-mini.cluvi.com/AQvFHtuVIe/w_576_AQvFHtuVIe_eceae8b0-f5ee-4796-8c1b-43caba21e277.jpeg"
+    },
+    {
+      "id": "thomas-shelby",
+      "categories": [
+        "burgers"
+      ],
+      "name": "THOMAS SHELBY",
+      "price": 43900,
+      "description": "220 gramos de carne premium al carbón, doble queso americano fundido, doble tocineta, cebolla caramelizada, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images.cluvi.com/1ydC9up3JQ/w_576_1ydC9up3JQ_dsc02425.jpg"
+    },
+    {
+      "id": "double-meat-onion",
+      "categories": [
+        "burgers"
+      ],
+      "name": "DOUBLE MEAT ONION",
+      "price": 43900,
+      "description": "220 gramos de doble carne premium al carbón, doble queso americano fundido, doble tocineta, aros de cebolla bañados en salsa BBQ, mayo ahumada y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/HM0BXw4UD8/w_576_HM0BXw4UD8_i7h1srzt45_double-meat-onion.jpg"
+    },
+    {
+      "id": "brisket-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "BRISKET BURGER",
+      "price": 46900,
+      "description": "150 gramos de carne premium al carbón, doble queso americano fundido, 100 gramos de pecho de res ahumado por 16 hrs, cebolla grillé, salsa alioli y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images.cluvi.com/i1kDfV4jVM/w_576_i1kDfV4jVM_dsc06812.jpg"
+    },
+    {
+      "id": "big-smoke",
+      "categories": [
+        "burgers"
+      ],
+      "name": "BIG SMOKE",
+      "price": 46900,
+      "description": "Doble carne premium, doble queso americano fundido, pulled pork BBQ, cebolla crispy, salsa ahumada y nuestro pan artesanal.",
+      "note": "Todas nuestras burgers vienen acompañadas de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/HRxIAzAdmc/w_576_HRxIAzAdmc_xb5urrnhsc_big-smoke.jpg"
+    },
+    {
+      "id": "brisket-smoke-burger",
+      "categories": [
+        "burgers"
+      ],
+      "name": "BRISKET SMOKE BURGER",
+      "price": 46900,
+      "description": "140 gr de jugosa carne Angus asada al carbón, acompañada de nuestra cremosa mayogarlic, queso cheddar fundido y nuestra especialidad, un Brisket importado, ahumado durante 18 horas! Todo esto potenciado con nuestra salsa barbecue artesanal, reducida con mango, que aporta un toque dulce y frutal irresistible. Finalizamos con cebolla crispy, dulce y crujiente con nuestro pan artesanal.",
+      "award": "Ganadora Burger Master 2025",
+      "featured": true,
+      "image": "https://images.cluvi.com/IERXDtP3RB/w_576_IERXDtP3RB_dsc07381-3.jpg"
+    },
+    {
+      "id": "korean-smoke-crunch",
+      "categories": [
+        "burgers"
+      ],
+      "name": "KOREAN SMOKE CRUNCH",
+      "price": 46900,
+      "description": "150 gramos de carne premium al carbón, cerdo asiático ahumado (char siu), queso cheddar fundido, lechuga romana y crocante de wonton coronado con nuestra salsa teriyaki artesanal, todo en un pan tipo brioche, acompañado de una salsa a base de gochujang con notas dulces, picante y umami que explotan en cada mordida",
+      "award": "Ganadora Burger Master 2026",
+      "featured": true,
+      "image": "https://images.cluvi.com/EFxc1VQtZc/w_576_EFxc1VQtZc_korean.jfif"
+    },
+    {
+      "id": "pulled-pork",
+      "categories": [
+        "sandwiches"
+      ],
+      "name": "PULLED PORK",
+      "price": 34900,
+      "description": "150 gramos de pulled pork BBQ, queso mozzarella fundido, salsa alioli, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todos nuestros sándwiches vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/HLMUPIKKMi/w_576_HLMUPIKKMi_h7c8rugg4b_pulled-pork.jpg"
+    },
+    {
+      "id": "cuban",
+      "categories": [
+        "sandwiches"
+      ],
+      "name": "CUBAN",
+      "price": 36900,
+      "description": "Cerdo ahumado tajado, jamón de pavo ahumado, queso mozzarella fundido, pepinillos, salsa alioli y nuestro pan baguette artesanal.",
+      "note": "Todos nuestros sándwiches vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/TQXTdZrzLT/w_576_TQXTdZrzLT_wphhrbrquh_cuban.jpg"
+    },
+    {
+      "id": "philly-cheese-steaks",
+      "categories": [
+        "sandwiches"
+      ],
+      "name": "PHILLY CHEESE STEAKS",
+      "price": 36900,
+      "description": "150 gramos de lomo de res salteado con nuestra salsa New York, cebolla caramelizada, queso americano fundido y nuestro pan artesanal.",
+      "note": "Todos nuestros sándwiches vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/uGcEGYytbf/w_576_uGcEGYytbf_bdajqldi0z_philly-cheese-steaks.jpg"
+    },
+    {
+      "id": "argento",
+      "categories": [
+        "sandwiches"
+      ],
+      "name": "ARGENTO",
+      "price": 36900,
+      "description": "Chorizo Argentino, lomo de res, chimichurri, queso mozzarella fundido, salsa alioli y nuestro pan baguette artesanal.",
+      "note": "Todos nuestros sándwiches vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/OG5ScdC3n8/w_576_OG5ScdC3n8_czvacrw5vi_argento.jpg"
+    },
+    {
+      "id": "brisket-sandwich",
+      "categories": [
+        "sandwiches"
+      ],
+      "name": "BRISKET SANDWICH",
+      "price": 40900,
+      "description": "Pecho de res ahumado por 16 hrs, queso americano fundido, cebolla crispy, cebolla grillé, salsa Dijon y nuestro pan brioche de la casa.",
+      "note": "Todos nuestros sandwiches vienen acompañados con papas a la francesa y nuestra deliciosa salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/2pwTTNOcyd/w_576_2pwTTNOcyd_9jrawvbdnh_brisket-sandwich.png"
+    },
+    {
+      "id": "sweet-bacon",
+      "categories": [
+        "hotdogs"
+      ],
+      "name": "SWEET BACON",
+      "price": 34900,
+      "description": "Salchicha premium, queso americano fundido, cebolla caramelizada, polvo de tocineta, cebolla blanca, mayo ahumada y nuestro pan artesanal.",
+      "note": "Todos nuestros hot dogs vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images-mini.cluvi.com/hZhU1DB7o8/w_576_hZhU1DB7o8_v2clrf5m5f_sweet-bacon.jpg"
+    },
+    {
+      "id": "suizo-garage",
+      "categories": [
+        "hotdogs"
+      ],
+      "name": "SUIZO GARAGE",
+      "price": 34900,
+      "description": "Salchicha suiza, cebolla blanca, queso mozzarella fundido, polvo de tocineta, salsa de la casa y nuestro pan artesanal.",
+      "note": "Todos nuestros hot dogs vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "image": "https://images.cluvi.com/AhrJodptRs/w_576_AhrJodptRs_dsc02260.jpg"
+    },
+    {
+      "id": "pulled-pork-hotdogs",
+      "categories": [
+        "hotdogs"
+      ],
+      "name": "PULLED PORK",
+      "price": 34900,
+      "description": "Salchicha premium, queso americano fundido, pulled pork bañado en salsa BBQ, mayo ahumada, cebolla blanca y nuestro pan artesanal.",
+      "note": "Todos nuestros hot dogs vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/M2CQf0SIgS/w_576_M2CQf0SIgS_yxbtquq3ui_hot-dog-pulled-pork.jpg"
+    },
+    {
+      "id": "chili",
+      "categories": [
+        "hotdogs"
+      ],
+      "name": "CHILI",
+      "price": 34900,
+      "description": "Salchicha premium, queso cheddar, cebolla blanca, chili (picante suave), mayo ahumada y nuestro pan artesanal.",
+      "note": "Todos nuestros hot dogs vienen acompañados de papas a la francesa y nuestra exquisita salsa de la casa.",
+      "featured": true,
+      "image": "https://images-mini.cluvi.com/DcKBZ8aQPI/w_576_DcKBZ8aQPI_lwct3lyekv_chili.jpg"
+    },
+    {
+      "id": "cheese-burger",
+      "categories": [
+        "kids"
+      ],
+      "name": "CHEESE BURGER",
+      "price": 25900,
+      "description": "Carne de res premium, queso americano, pan artesanal y salsa de tomate.",
+      "note": "Nuestro menú infantil viene acompañado de papas a la francesa, salsa de tomate y juguito.",
+      "image": "https://images-mini.cluvi.com/0ibVhO8RtT/w_576_0ibVhO8RtT_cheese-burger.PNG"
+    },
+    {
+      "id": "chicken-tenders",
+      "categories": [
+        "kids"
+      ],
+      "name": "CHICKEN TENDERS",
+      "price": 25900,
+      "description": "Tornados de pollo apanado.",
+      "note": "Nuestro menú infantil viene acompañado de papas a la francesa, salsa de tomate y juguito.",
+      "image": "https://images-mini.cluvi.com/BeKvzZGI0V/w_576_BeKvzZGI0V_chicken-tenders.PNG"
+    },
+    {
+      "id": "chocoflan",
+      "categories": [
+        "postres"
+      ],
+      "name": "CHOCOFLAN",
+      "price": 17900,
+      "image": "https://images.cluvi.com/5XNDBxXeGY/w_576_5XNDBxXeGY_chocoflan.jpg"
+    },
+    {
+      "id": "copa-de-helado",
+      "categories": [
+        "postres"
+      ],
+      "name": "COPA DE HELADO",
+      "price": 16900,
+      "description": "Helado de vainilla con crumble de galleta y caramelo.",
+      "image": "https://images-mini.cluvi.com/wjSt09S63S/w_576_wjSt09S63S_img_5009.jpg"
+    },
+    {
+      "id": "chocomilo",
+      "categories": [
+        "postres"
+      ],
+      "name": "CHOCOMILO",
+      "price": 18900,
+      "description": "Bizcocho relleno de crema pastelera de chocolate y ganache, cubierto de salsa de Milo caliente",
+      "image": "https://images.cluvi.com/VLvGyoUe7g/w_576_VLvGyoUe7g_dsc02231.jpg"
+    },
+    {
+      "id": "agua-hatsu",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "AGUA HATSU",
+      "price": 8500,
+      "image": "https://images-mini.cluvi.com/1rNB07ccfD/w_576_1rNB07ccfD_images.jpg"
+    },
+    {
+      "id": "soda-bretana",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA BRETAÑA",
+      "price": 9900,
+      "description": "Puedes pedirla también michelada",
+      "image": "https://images-mini.cluvi.com/poEFtG2j9O/w_576_poEFtG2j9O_2b16a933-1303-40c0-94e1-f2a8c8b66f5b.jpeg"
+    },
+    {
+      "id": "gaseosa-postobon",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "GASEOSA POSTOBÓN",
+      "price": 9900,
+      "image": "https://images.cluvi.com/OKiYDBVava/w_576_OKiYDBVava_f4777eaf-ea08-4026-bfe1-07367c91f800.jpg"
+    },
+    {
+      "id": "ginger-canada-dry",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "GINGER CANADA DRY",
+      "price": 9900,
+      "description": "También puedes pedirla michelada",
+      "image": "https://images-mini.cluvi.com/228NgR6v5q/w_576_228NgR6v5q_a8395e44-f136-4caf-bc2c-a0348c50cd93.jpeg"
+    },
+    {
+      "id": "soda-hatsu",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA HATSU",
+      "price": 11900,
+      "image": "https://images-mini.cluvi.com/ILmvf43z7l/w_576_ILmvf43z7l_descarga-1.jpg"
+    },
+    {
+      "id": "te-hatsu",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "TÉ HATSU",
+      "price": 11900,
+      "image": "https://images-mini.cluvi.com/HGEtHAf6xD/w_576_HGEtHAf6xD_tehatsu-todas-las-variedades.jpg"
+    },
+    {
+      "id": "agua-tonica-ocean-976",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "AGUA TÓNICA OCEAN 976",
+      "price": 11900,
+      "image": "https://images.cluvi.com/95fXPeZKF0/w_576_95fXPeZKF0_agua-tonica-ocean.jpg"
+    },
+    {
+      "id": "gatorlit",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "GATORLIT",
+      "price": 11900,
+      "image": "https://images.cluvi.com/2QBT9OFAW0/w_576_2QBT9OFAW0_whatsapp-image-2025-09-04-at-09-37-15.jpeg"
+    },
+    {
+      "id": "jugo-de-maracuya",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "JUGO DE MARACUYÁ",
+      "price": 12900,
+      "image": "https://images-mini.cluvi.com/cILCPcDuR7/w_576_cILCPcDuR7_jugo-de-maracuya.jpg"
+    },
+    {
+      "id": "jugo-de-fresa",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "JUGO DE FRESA",
+      "price": 12900
+    },
+    {
+      "id": "limonada-natural",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "LIMONADA NATURAL",
+      "price": 11900,
+      "image": "https://images.cluvi.com/tHhZMtFE8D/w_576_tHhZMtFE8D_3ebc70af-414f-480d-a4f7-8f9984aff282.jpg"
+    },
+    {
+      "id": "jugo-de-mandarina",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "JUGO DE MANDARINA",
+      "price": 12900,
+      "image": "https://images.cluvi.com/oKeUjAZEug/w_576_oKeUjAZEug_jugo-de-mandarina.jpg"
+    },
+    {
+      "id": "limonada-cerezada",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "LIMONADA CEREZADA",
+      "price": 12900,
+      "image": "https://images-mini.cluvi.com/vWcJOUydQE/w_576_vWcJOUydQE_img_8126.jpeg"
+    },
+    {
+      "id": "limonada-de-coco",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "LIMONADA DE COCO",
+      "price": 12900,
+      "image": "https://images-mini.cluvi.com/rpOuVWAXJM/w_576_rpOuVWAXJM_img_8127.jpeg"
+    },
+    {
+      "id": "limonada-de-hierbabuena",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "LIMONADA DE HIERBABUENA",
+      "price": 12900,
+      "image": "https://images.cluvi.com/EGUDiduhxG/w_576_EGUDiduhxG_b13a2b2c-d868-4b34-ab96-c5c00d8531d9.jpg"
+    },
+    {
+      "id": "limonada-de-lychee",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "LIMONADA DE LYCHEE",
+      "price": 12900
+    },
+    {
+      "id": "soda-de-frutos-rojos",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA DE FRUTOS ROJOS",
+      "price": 18900,
+      "description": "Disfrútala con soda Bretaña o también con ginger Canadá dry",
+      "image": "https://images-mini.cluvi.com/IXuBA9qSM8/w_576_IXuBA9qSM8_ydxyuolcch_soda-frutos-rojos.jpg"
+    },
+    {
+      "id": "soda-de-frutos-amarillos",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA DE FRUTOS AMARILLOS",
+      "price": 18900,
+      "description": "Disfrútala con soda Bretaña o también con ginger Canadá dry",
+      "image": "https://images-mini.cluvi.com/5iJRlajJG2/w_576_5iJRlajJG2_zfq4dstzxu_soda-frutos-amarillos.jpg"
+    },
+    {
+      "id": "soda-de-lychee",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA DE LYCHEE",
+      "price": 18900,
+      "description": "Disfrútala con soda Bretaña o también con ginger Canadá dry",
+      "image": "https://images.cluvi.com/kFAi9JT4af/w_576_kFAi9JT4af_dsc00271.jpg"
+    },
+    {
+      "id": "soda-de-jengibre",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA DE JENGIBRE",
+      "price": 18900,
+      "description": "Disfrútala con soda Bretaña o también con ginger Canadá dry",
+      "image": "https://images.cluvi.com/X2LkG2059d/w_576_X2LkG2059d_dsc00279.jpg"
+    },
+    {
+      "id": "soda-fuxion-cool-age",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA FUXION COOL AGE",
+      "price": 18900,
+      "description": "FUXION COOL AGE: Péptidos de colágeno, Coenzima Q10, Aminoácidos, Vitamina E, endulzado con estevia diluido en soda Bretaña y michelado con sal y Tajín.",
+      "image": "https://images.cluvi.com/ImpPYvL8nW/w_576_ImpPYvL8nW_whatsapp-image-2026-06-23-at-20-10-49.jpeg"
+    },
+    {
+      "id": "soda-fuxion-vita-xtra",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA FUXION VITA XTRA",
+      "price": 18900,
+      "description": "FUXION VITA XTRA: Energizante Multivitamínico, a base de Maca, Guayusa, Acaí Berry, Maíz Morado, endulzado con estevia, diluido en soda Bretaña y michelado con sal y Tajín",
+      "image": "https://images.cluvi.com/mrHhVSGGMr/w_576_mrHhVSGGMr_whatsapp-image-2026-06-07-at-20-17-58-1.jpeg"
+    },
+    {
+      "id": "soda-fuxion-t-t3",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "SODA FUXION T T3",
+      "price": 18900,
+      "description": "FUXION T T3: Lipoico Rompe grasa: Té verde Matcha, Té Rojo, Té Negro, vitaminas B1, B2, B6 Endulzado de Stevia diluido en soda Bretaña y michelado de sal y Tajín.",
+      "image": "https://images.cluvi.com/hGYzMIdONf/w_576_hGYzMIdONf_whatsapp-image-2026-06-07-at-20-17-58.jpeg"
+    },
+    {
+      "id": "red-bull",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "RED BULL",
+      "price": 16900,
+      "image": "https://images-mini.cluvi.com/OWHxnPE2Wq/w_576_OWHxnPE2Wq_descarga.jpg"
+    },
+    {
+      "id": "red-bull-sugarfree",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "RED BULL SUGARFREE",
+      "price": 16900,
+      "image": "https://images.cluvi.com/AxwQs3DgQ5/w_576_AxwQs3DgQ5_descarga.jfif"
+    },
+    {
+      "id": "red-bull-red-edition",
+      "categories": [
+        "bebidas"
+      ],
+      "name": "RED BULL RED EDITION",
+      "price": 16900,
+      "image": "https://images.cluvi.com/IluwAxkb3s/w_576_IluwAxkb3s_red-bull-red.png"
+    },
+    {
+      "id": "adicional-michelado",
+      "categories": [
+        "bebidas",
+        "cervezas",
+        "extras"
+      ],
+      "name": "ADICIONAL MICHELADO",
+      "price": 3000
+    },
+    {
+      "id": "budweiser-peq",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "BUDWEISER PEQ",
+      "price": 9900,
+      "image": "https://images-mini.cluvi.com/i8g6PBG4NJ/w_576_i8g6PBG4NJ_1596650636-15-budweiser-343-jpg.jpg"
+    },
+    {
+      "id": "club-colombia-dorada",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CLUB COLOMBIA DORADA",
+      "price": 11900,
+      "image": "https://images-mini.cluvi.com/3flBkyz19X/w_576_3flBkyz19X_club-colombia-dorada.jpg"
+    },
+    {
+      "id": "heineken-de-barril",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "HEINEKEN DE BARRIL",
+      "price": 10900,
+      "description": "Vaso de Heineken importada",
+      "image": "https://images.cluvi.com/laLBxHbvZT/w_576_laLBxHbvZT_whatsapp-image-2025-12-09-at-16-46-16.jpeg"
+    },
+    {
+      "id": "heineken",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "HEINEKEN",
+      "price": 13900,
+      "variants": [
+        {
+          "label": "Jarra",
+          "price": 33900
+        }
+      ],
+      "image": "https://images-mini.cluvi.com/0yPacSr45B/w_576_0yPacSr45B_descarga-1.jpg"
+    },
+    {
+      "id": "cordillera-rosada",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CORDILLERA ROSADA",
+      "price": 13900,
+      "image": "https://images.cluvi.com/S8L3VuxTs7/w_576_S8L3VuxTs7_3-cordilleras-rosa.jpg"
+    },
+    {
+      "id": "corona",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CORONA",
+      "price": 14900,
+      "variants": [
+        {
+          "label": "Jarra",
+          "price": 36900
+        }
+      ],
+      "image": "https://images-mini.cluvi.com/bCdQwhCCyN/w_576_bCdQwhCCyN_cerveza-corona-355-ml-botella.jpg"
+    },
+    {
+      "id": "corona-cero",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CORONA CERO",
+      "price": 14900,
+      "description": "Cerveza sin alcohol.",
+      "image": "https://images.cluvi.com/ZpITwvGE55/w_576_ZpITwvGE55_whatsapp-image-2026-10-02-at-18-45-20.jpeg"
+    },
+    {
+      "id": "stella-artois",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "STELLA ARTOIS",
+      "price": 15900,
+      "variants": [
+        {
+          "label": "Jarra",
+          "price": 39900
+        }
+      ],
+      "image": "https://images-mini.cluvi.com/UnnrV3Mt8r/w_576_UnnrV3Mt8r_descarga-2.jpg"
+    },
+    {
+      "id": "cerveza-frutos-amarillos-o-frutos-rojos",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CERVEZA FRUTOS AMARILLOS O FRUTOS ROJOS",
+      "price": 26900,
+      "image": "https://images-mini.cluvi.com/GcqpuUL9Qp/w_576_GcqpuUL9Qp_tr5b4ib64x_cerveza-frutos-amarillos.jpg"
+    },
+    {
+      "id": "cerveza-modelo",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "CERVEZA MODELO",
+      "price": 16900,
+      "image": "https://images.cluvi.com/fLcCXuX1EQ/w_576_fLcCXuX1EQ_whatsapp-image-2026-06-09-at-17-38-05.jpeg"
+    },
+    {
+      "id": "jarra-de-heineken",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "JARRA DE HEINEKEN",
+      "price": 36900
+    },
+    {
+      "id": "jarra-de-corona",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "JARRA DE CORONA",
+      "price": 39900
+    },
+    {
+      "id": "jarra-de-stella-artois",
+      "categories": [
+        "cervezas"
+      ],
+      "name": "JARRA DE STELLA ARTOIS",
+      "price": 41900
+    },
+    {
+      "id": "copa-de-vino-de-la-casa",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "COPA DE VINO DE LA CASA",
+      "price": 28900
+    },
+    {
+      "id": "gin-tonic",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "GIN TONIC",
+      "price": 31900,
+      "description": "Cocktail clásico a base de ginebra Gordon's y agua tónica.",
+      "image": "https://images-mini.cluvi.com/SV9HkacfUM/w_576_SV9HkacfUM_gin-tonic.PNG"
+    },
+    {
+      "id": "gin-tonic-frutos-rojos",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "GIN TONIC FRUTOS ROJOS",
+      "price": 32900,
+      "description": "Cocktail clásico a base de ginebra Gordon's y agua tónica, con nuestra reducción de frutos rojos.",
+      "image": "https://images-mini.cluvi.com/bo8Abs1yDY/w_576_bo8Abs1yDY_gin-tonic-frutos-rojos.jpg"
+    },
+    {
+      "id": "gin-tonic-frutos-amarillos",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "GIN TONIC FRUTOS AMARILLOS",
+      "price": 32900,
+      "description": "Cocktail clásico a base de ginebra Gordon's y agua tónica, con nuestra reducción de frutos amarillos.",
+      "image": "https://images-mini.cluvi.com/u9Wmo4BLhy/w_576_u9Wmo4BLhy_gin-tonic-frutos-amarillos.jpg"
+    },
+    {
+      "id": "aperol-spritz",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "APEROL SPRITZ",
+      "price": 32900,
+      "description": "Cocktail clásico a base de licor italiano aperol y vino espumeante, refrescante y perfecto como aperitivo!",
+      "image": "https://images-mini.cluvi.com/bSVfisRc7L/w_576_bSVfisRc7L_aperol-spritz.jpg"
+    },
+    {
+      "id": "mojito-cubano",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "MOJITO CUBANO",
+      "price": 33900,
+      "description": "Cocktail clásico a base de ron, hierbabuena y soda.",
+      "image": "https://images.cluvi.com/7aJuI9KbT7/w_576_7aJuI9KbT7_dsc02451.jpg"
+    },
+    {
+      "id": "moscow-mule",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "MOSCOW MULE",
+      "price": 32900,
+      "description": "Cocktail clásico y refrescante a base de vodka y cerveza de jengibre.",
+      "image": "https://images-mini.cluvi.com/ZMXkCGPR1G/w_576_ZMXkCGPR1G_mocow-mule.PNG"
+    },
+    {
+      "id": "tom-collins",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "TOM COLLINS",
+      "price": 30900,
+      "description": "Cocktail clásico a base de ginebra, soda y un dash de cereza. No te dejes engañar de su simpleza!",
+      "image": "https://images-mini.cluvi.com/uHxMrMt3sG/w_576_uHxMrMt3sG_tom-collins.jpg"
+    },
+    {
+      "id": "gin-rosso",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "GIN ROSSO",
+      "price": 36900,
+      "description": "Cocktail de autor, mezcla de ginebra y vermouth rosso con frutos rojos. Un cocktail pensado en chicas!",
+      "image": "https://images-mini.cluvi.com/2FiPTS4NSh/w_576_2FiPTS4NSh_gin-rosso.PNG"
+    },
+    {
+      "id": "jager-mojito",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "JAGER MOJITO",
+      "price": 36900,
+      "description": "El clásico mojito con un adicional de Jägermeister que le da más poder y sabor al tradicional!",
+      "image": "https://images-mini.cluvi.com/HoLGlmsYx5/w_576_HoLGlmsYx5_jagger-mojito.PNG"
+    },
+    {
+      "id": "smoked-barbaro",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "SMOKED BÁRBARO",
+      "price": 37900,
+      "description": "Whisky Irlandés, licor de naranja, mora, angostura, ahumado con madera de roble.",
+      "image": "https://images-mini.cluvi.com/KLxCgluwlL/w_576_KLxCgluwlL_smoked-barbaro.jpg"
+    },
+    {
+      "id": "margarita-tradicional",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "MARGARITA TRADICIONAL",
+      "price": 38900,
+      "description": "Cocktail clásico a base de tequila José Cuervo, triple sec y zumo de limón.",
+      "image": "https://images-mini.cluvi.com/4w9rnjjaeM/w_576_4w9rnjjaeM_zklm814nnx_margarita-garage.jpg"
+    },
+    {
+      "id": "margarita-garage-frutos-rojos",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "MARGARITA GARAGE FRUTOS ROJOS",
+      "price": 38900,
+      "description": "Cocktail clásico a base de tequila José Cuervo, triple sec, zumo de limón y nuestra reducción de frutos rojos.",
+      "image": "https://images-mini.cluvi.com/4w9rnjjaeM/w_576_4w9rnjjaeM_zklm814nnx_margarita-garage.jpg"
+    },
+    {
+      "id": "margarita-garage-frutos-amarillos",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "MARGARITA GARAGE FRUTOS AMARILLOS",
+      "price": 38900,
+      "description": "Cocktail clásico a base de tequila José Cuervo, triple sec, zumo de limón y nuestra reducción de frutos amarillos.",
+      "image": "https://images-mini.cluvi.com/4w9rnjjaeM/w_576_4w9rnjjaeM_zklm814nnx_margarita-garage.jpg"
+    },
+    {
+      "id": "negroni",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "NEGRONI",
+      "price": 37000,
+      "description": "Cocktail clásico italiano para paladares fuertes y exquisitos. La elegancia hecha cocktail."
+    },
+    {
+      "id": "gin-tonic-hendricks",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "GIN TONIC HENDRICKS",
+      "price": 48900,
+      "description": "Cocktail clásico a base de Hendrick's y tónica Mil976, para paladares más exigentes.",
+      "image": "https://images-mini.cluvi.com/KUXLlE0kOt/w_576_KUXLlE0kOt_gin-tonic-hendricks.jpg"
+    },
+    {
+      "id": "jarra-sangria-garage",
+      "categories": [
+        "cocktails"
+      ],
+      "name": "JARRA SANGRÍA GARAGE",
+      "price": 140000
+    },
+    {
+      "id": "botella-vino-tinto-malbec-fm",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Vino Tinto Malbec Fm",
+      "price": 120000,
+      "image": "https://images.cluvi.com/T62LMJl2tr/w_576_T62LMJl2tr_whatsapp-image-2024-08-10-at-16-22-36.jpeg"
+    },
+    {
+      "id": "botella-vino-lambruisco-rosse",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Vino Lambruisco Rosse",
+      "price": 120000,
+      "image": "https://images.cluvi.com/M9uLaIbUk9/w_576_M9uLaIbUk9_whatsapp-image-2024-08-10-at-15-16-07.jpeg"
+    },
+    {
+      "id": "aguardiente-antioqueno-azul",
+      "categories": [
+        "licores"
+      ],
+      "name": "Aguardiente Antioqueño Azul",
+      "price": 220000,
+      "image": "https://images.cluvi.com/59CfPwCqj3/w_576_59CfPwCqj3_19a6c92d-c4a6-4c4d-b516-90d0872fc2da.jfif"
+    },
+    {
+      "id": "aguardiente-antioqueno-verde",
+      "categories": [
+        "licores"
+      ],
+      "name": "Aguardiente Antioqueño Verde",
+      "price": 220000,
+      "image": "https://images.cluvi.com/JOrq5AnKIB/w_576_JOrq5AnKIB_6d94483f-a639-41ff-9ebb-b84ed9886ef4.jfif"
+    },
+    {
+      "id": "aguardiente-amarillo",
+      "categories": [
+        "licores"
+      ],
+      "name": "Aguardiente Amarillo",
+      "price": 240000,
+      "image": "https://images.cluvi.com/7XaCJ0e2Wn/w_576_7XaCJ0e2Wn_84e23bad-4439-42f7-8481-7a6ebce6e615.jfif"
+    },
+    {
+      "id": "botella-jose-cuervo-x-750-ml",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella José Cuervo x 750 Ml",
+      "price": 240000,
+      "image": "https://images.cluvi.com/lEKl20hJyw/w_576_lEKl20hJyw_whatsapp-image-2024-08-10-at-16-31-02.jpeg"
+    },
+    {
+      "id": "botella-ginebra-tanqueray-london-dry",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Ginebra Tanqueray London Dry",
+      "price": 280000,
+      "image": "https://images.cluvi.com/pL2oS7wssv/w_576_pL2oS7wssv_whatsapp-image-2024-08-10-at-15-16-09-1.jpeg"
+    },
+    {
+      "id": "botella-jack-daniel-s-7",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Jack Daniel's #7",
+      "price": 280000,
+      "image": "https://images.cluvi.com/Mj3n7tMRBM/w_576_Mj3n7tMRBM_whatsapp-image-2024-08-10-at-15-16-09-3.jpeg"
+    },
+    {
+      "id": "botella-ron-zacapa-ambar-12-anos",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Ron Zacapa Ambar 12 años",
+      "price": 300000,
+      "image": "https://images.cluvi.com/3ME6jLAhmO/w_576_3ME6jLAhmO_whatsapp-image-2024-08-10-at-15-16-08-2.jpeg"
+    },
+    {
+      "id": "botella-whisky-old-parr-12-anos",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Whisky Old Parr 12 años",
+      "price": 320000,
+      "image": "https://images.cluvi.com/eYZZssJv52/w_576_eYZZssJv52_whatsapp-image-2024-08-10-at-15-16-08-5.jpeg"
+    },
+    {
+      "id": "botella-whisky-johnny-walker",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Whisky Johnny Walker",
+      "price": 320000,
+      "image": "https://images.cluvi.com/rWVXJUiP3d/w_576_rWVXJUiP3d_whatsapp-image-2024-08-10-at-15-16-09-2.jpeg"
+    },
+    {
+      "id": "botella-monkey-shoulder",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Monkey Shoulder",
+      "price": 330000,
+      "image": "https://images.cluvi.com/CrnhLYVrvh/w_576_CrnhLYVrvh_whatsapp-image-2024-08-10-at-15-16-09.jpeg"
+    },
+    {
+      "id": "botella-whisky-buchanans-12-anos",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Whisky Buchanans 12 años",
+      "price": 340000,
+      "image": "https://images.cluvi.com/czYcivcDI5/w_576_czYcivcDI5_whatsapp-image-2024-08-10-at-15-16-10.jpeg"
+    },
+    {
+      "id": "botella-glenfiddich-12-anos",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Glenfiddich 12 años",
+      "price": 360000,
+      "image": "https://images.cluvi.com/ENwzn3GP0R/w_576_ENwzn3GP0R_whatsapp-image-2024-08-10-at-15-16-09-5.jpeg"
+    },
+    {
+      "id": "botella-whisky-buchanans-master",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Whisky Buchanans Master",
+      "price": 380000,
+      "image": "https://images.cluvi.com/iSrVcriAV1/w_576_iSrVcriAV1_whatsapp-image-2024-08-10-at-15-16-10-2.jpeg"
+    },
+    {
+      "id": "botella-mezcal-400-conejo",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Mezcal 400 Conejo",
+      "price": 440000,
+      "image": "https://images.cluvi.com/N8G5bwcuyk/w_576_N8G5bwcuyk_whatsapp-image-2024-08-10-at-16-26-55.jpeg"
+    },
+    {
+      "id": "botella-hendricks",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Hendricks",
+      "price": 450000,
+      "image": "https://images.cluvi.com/6BD0bL5MAk/w_576_6BD0bL5MAk_whatsapp-image-2024-08-10-at-15-16-08-1.jpeg"
+    },
+    {
+      "id": "botella-tequila-don-julio-blanco",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Tequila Don Julio Blanco",
+      "price": 460000,
+      "image": "https://images.cluvi.com/0NTcUdJwbY/w_576_0NTcUdJwbY_whatsapp-image-2024-08-10-at-15-16-08-4.jpeg"
+    },
+    {
+      "id": "botella-tequila-don-julio-reposado",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Tequila Don Julio Reposado",
+      "price": 480000,
+      "image": "https://images.cluvi.com/1TC7mom2eO/w_576_1TC7mom2eO_whatsapp-image-2024-08-10-at-16-17-24.jpeg"
+    },
+    {
+      "id": "botella-tequila-don-julio-anejo",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Tequila Don Julio Añejo",
+      "price": 550000,
+      "image": "https://images.cluvi.com/sJZqLHy7zr/w_576_sJZqLHy7zr_whatsapp-image-2024-08-10-at-15-16-08-3.jpeg"
+    },
+    {
+      "id": "botella-don-julio-70",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Don Julio 70",
+      "price": 650000,
+      "image": "https://images.cluvi.com/2BXlF2fRht/w_576_2BXlF2fRht_c07c708a-8356-4082-b1ec-1268712bfa5a.jpg"
+    },
+    {
+      "id": "botella-whisky-buchanans-18-anos",
+      "categories": [
+        "licores"
+      ],
+      "name": "Botella Whisky Buchanans 18 Años",
+      "price": 650000,
+      "image": "https://images.cluvi.com/82J2E3lAUb/w_576_82J2E3lAUb_whatsapp-image-2024-08-10-at-15-16-10-1.jpeg"
+    },
+    {
+      "id": "michelado-de-chamoy",
+      "categories": [
+        "extras"
+      ],
+      "name": "MICHELADO DE CHAMOY",
+      "price": 4000
+    },
+    {
+      "id": "salsa-de-la-casa",
+      "categories": [
+        "extras"
+      ],
+      "name": "SALSA DE LA CASA",
+      "price": 2000
+    },
+    {
+      "id": "guacamole",
+      "categories": [
+        "extras"
+      ],
+      "name": "GUACAMOLE",
+      "price": 3000
+    },
+    {
+      "id": "pico-de-gallo",
+      "categories": [
+        "extras"
+      ],
+      "name": "PICO DE GALLO",
+      "price": 3000
+    },
+    {
+      "id": "salsa-alioli",
+      "categories": [
+        "extras"
+      ],
+      "name": "SALSA ALIOLI",
+      "price": 4000
+    },
+    {
+      "id": "chimichurri",
+      "categories": [
+        "extras"
+      ],
+      "name": "CHIMICHURRI",
+      "price": 4000
+    },
+    {
+      "id": "aros-de-cebolla",
+      "categories": [
+        "extras"
+      ],
+      "name": "AROS DE CEBOLLA",
+      "price": 8900
+    },
+    {
+      "id": "papas-a-la-francesa",
+      "categories": [
+        "extras"
+      ],
+      "name": "PAPAS A LA FRANCESA",
+      "price": 9000
+    },
+    {
+      "id": "papas-casco",
+      "categories": [
+        "extras"
+      ],
+      "name": "PAPAS CASCO",
+      "price": 9000
+    },
+    {
+      "id": "chorizo-argentino",
+      "categories": [
+        "extras"
+      ],
+      "name": "CHORIZO ARGENTINO",
+      "price": 10900
+    },
+    {
+      "id": "chorizo-antioqueno",
+      "categories": [
+        "extras"
+      ],
+      "name": "CHORIZO ANTIOQUEÑO",
+      "price": 10900
+    }
+  ]
+}

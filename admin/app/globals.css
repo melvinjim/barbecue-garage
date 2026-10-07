@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Misma paleta que el sitio público: negro, grises y el rojo de Barbecue Garage. */
+:root {
+  --background: #383838;
+  --foreground: #f5f5f5;
+  --surface: #0a0a0a;
+  --surface-2: #161616;
+  --line: #4a4a4a;
+  --muted: #bcbcbc;
+  --red: #da2928;
+  --red-text: #ff5a57;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--line);
+  --color-muted: var(--muted);
+  --color-brand: var(--red);
+  --color-brand-text: var(--red-text);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  /* Red de seguridad: nada del panel debe ensanchar la página en el celular.
+     (clip, no hidden: así el encabezado fijo sigue funcionando). */
+  overflow-x: clip;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+:focus-visible {
+  outline: 3px solid #fff;
+  outline-offset: 3px;
+}

@@ -1,0 +1,12 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+.claude/
+
+# Compilación del panel (Next.js): se regenera sola, nunca se sube.
+# (Aparece también en la raíz porque el panel lee ../js/data/schema.js.)
+.next/

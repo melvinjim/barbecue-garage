@@ -1,0 +1,42 @@
+{
+  "name": "Barbecue Garage",
+  "branch": "Cra 21 · Le Meridiem Golf",
+  "tagline": "Smoked burgers & meats",
+  "description": "Burgers, hot dogs, sandwiches y cortes de carne al carbón, con ahumados de cocción lenta.",
+  "logo": "https://images-mini.cluvi.com/JB2A91gDlj/thumb_JB2A91gDlj_x9cjkengze_logo-header.png",
+  "tiles": {
+    "ubicacion": "https://images.cluvi.com/laLBxHbvZT/w_576_laLBxHbvZT_whatsapp-image-2025-12-09-at-16-46-16.jpeg",
+    "domicilio": "https://images-mini.cluvi.com/2pwTTNOcyd/w_576_2pwTTNOcyd_9jrawvbdnh_brisket-sandwich.png",
+    "menu": "https://images.cluvi.com/i1kDfV4jVM/w_576_i1kDfV4jVM_dsc06812.jpg",
+    "reserva": "https://images.cluvi.com/7aJuI9KbT7/w_576_7aJuI9KbT7_dsc02451.jpg"
+  },
+  "locations": [
+    {
+      "id": "cra-21",
+      "name": "Sede Cra 21",
+      "address": "Cra 21 # 48-08 L2",
+      "whatsapp": "+57 304 270 3186"
+    },
+    {
+      "id": "le-meridiem-golf",
+      "name": "Sede Le Meridiem Golf",
+      "address": "CC Le Meridiem Golf, Cra 59b # 81-158 L 301",
+      "whatsapp": "+57 301 749 1089"
+    }
+  ],
+  "contact": {
+    "address": "",
+    "city": "",
+    "phone": "",
+    "whatsapp": "",
+    "email": "",
+    "mapsUrl": ""
+  },
+  "hours": [],
+  "social": {
+    "instagram": "",
+    "facebook": "",
+    "tiktok": ""
+  },
+  "reviewUrl": ""
+}

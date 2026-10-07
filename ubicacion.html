@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <!-- Política de seguridad: solo recursos propios + fotos de los hosts listados. Debe coincidir con _headers (hay un test). -->
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self' https://images.cluvi.com https://images-mini.cluvi.com; font-src 'self'; connect-src 'self'; manifest-src 'self'; base-uri 'none'; form-action 'none'; object-src 'none'"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#000000" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Nuestra ubicación | Barbecue Garage</title>
+    <meta
+      name="description"
+      content="Sedes de Barbecue Garage (Cra 21 y Le Meridiem Golf): dirección, WhatsApp y cómo llegar con Google Maps."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Nuestra ubicación | Barbecue Garage" />
+    <meta property="og:description" content="Encuentra la sede más cercana y llega con Google Maps." />
+    <meta property="og:locale" content="es_CO" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/tokens.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/layout.css" />
+    <link rel="stylesheet" href="css/components.css" />
+    <script type="module" src="js/pages/ubicacion.js"></script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#sedes">Saltar a las sedes</a>
+    <header id="site-header" class="site-header"></header>
+
+    <main id="contenido">
+      <section class="page-head" aria-labelledby="page-title">
+        <div class="container">
+          <a class="back-link" href="index.html">← Volver al inicio</a>
+        </div>
+        <div class="container page-head__inner">
+          <p class="eyebrow">Encuéntranos</p>
+          <h1 id="page-title" class="page-head__title">Nuestras sedes</h1>
+          <p class="page-head__text">Toca una sede para abrir Google Maps y llegar.</p>
+        </div>
+      </section>
+      <div class="stripe" aria-hidden="true"></div>
+
+      <section id="sedes" class="section" aria-label="Lista de sedes">
+        <div class="container">
+          <div id="places" class="places"></div>
+          <div id="extras" class="contact__grid extras" hidden></div>
+          <noscript>
+            <p class="state state--error">Para ver las sedes necesitas activar JavaScript en tu navegador.</p>
+          </noscript>
+        </div>
+      </section>
+    </main>
+
+    <footer id="site-footer" class="site-footer"></footer>
+  </body>
+</html>
