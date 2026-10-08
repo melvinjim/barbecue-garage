@@ -995,11 +995,16 @@
   background: rgba(0, 0, 0, 0.74);
 }
 
+/* La altura del panel es DEFINIDA (no "ajustada al contenido"). Con altura automática y un hijo de
+   height:100%, varios navegadores de celular calculan 0 y el panel queda invisible: solo se ve el fondo
+   oscuro. Cada altura va primero en vh (navegadores viejos) y luego en dvh (barra del navegador móvil). */
 @media (max-width: 719.98px) {
   .cart {
     inset: auto 0 0;
     width: 100%;
-    max-height: 92dvh;
+    height: 92vh;
+    height: 92dvh;
+    max-height: none;
     border-top: 1px solid var(--line-strong);
     border-radius: 20px 20px 0 0;
   }
@@ -1013,6 +1018,7 @@
   .cart {
     inset: 0 0 0 auto;
     width: min(480px, 100%);
+    height: 100vh;
     height: 100dvh;
     max-height: none;
     border-left: 1px solid var(--line-strong);
@@ -1023,27 +1029,24 @@
   }
 }
 
+/* Solo movimiento, sin desvanecer: si un navegador no avanzara la animación, la ventana igual se vería. */
 @keyframes sheet-up {
   from {
     transform: translateY(40px);
-    opacity: 0;
   }
 
   to {
     transform: none;
-    opacity: 1;
   }
 }
 
 @keyframes sheet-in {
   from {
     transform: translateX(40px);
-    opacity: 0;
   }
 
   to {
     transform: none;
-    opacity: 1;
   }
 }
 
@@ -1051,7 +1054,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  max-height: inherit;
 }
 
 .cart__head {
@@ -1412,6 +1414,7 @@
   inset: auto 0 0;
   width: 100%;
   max-width: none;
+  max-height: 94vh;
   max-height: 94dvh;
   margin: 0;
   padding: 0;
@@ -1434,6 +1437,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  max-height: 94vh;
   max-height: 94dvh;
 }
 
