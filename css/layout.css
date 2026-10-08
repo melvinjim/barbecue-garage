@@ -385,14 +385,9 @@
   text-transform: uppercase;
 }
 
-/* Enlace al panel: se ve como el nombre de la marca, sin llamar la atención. */
+/* Botón de acceso al panel administrativo (discreto: contorno, sin relleno). */
 .site-footer__admin {
-  color: inherit;
-  text-decoration: none;
-}
-
-.site-footer__admin:hover strong {
-  text-decoration: underline;
+  margin-top: 8px;
 }
 
 .site-footer__legal {

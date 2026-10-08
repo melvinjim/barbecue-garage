@@ -111,14 +111,7 @@ function renderFooter(site) {
     h(
       'div',
       { class: 'container site-footer__inner' },
-      h(
-        'p',
-        { class: 'site-footer__brand' },
-        adminHref
-          ? h('a', { class: 'site-footer__admin', href: adminHref, target: '_blank', title: 'Panel administrativo', 'aria-label': `${name}, panel administrativo` }, h('strong', {}, name))
-          : h('strong', {}, name),
-        site.branch ? ` · ${site.branch}` : '',
-      ),
+      h('p', { class: 'site-footer__brand' }, h('strong', {}, name), site.branch ? ` · ${site.branch}` : ''),
       h(
         'nav',
         { class: 'site-footer__nav', 'aria-label': 'Secciones' },
@@ -127,6 +120,9 @@ function renderFooter(site) {
       h('p', { class: 'site-footer__legal' }, `Precios en pesos colombianos (COP). © ${new Date().getFullYear()} ${name}.`),
       site.reviewHref
         ? h('a', { class: 'site-footer__review', href: site.reviewHref, target: '_blank' }, 'Califica tu experiencia')
+        : null,
+      adminHref
+        ? h('a', { class: 'btn btn--ghost btn--sm site-footer__admin', href: adminHref, target: '_blank' }, 'Panel administrativo', icon('external'))
         : null,
     ),
   );
