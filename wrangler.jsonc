@@ -1,0 +1,9 @@
+{
+  // Publicación en Cloudflare (Workers con archivos estáticos). No hay código de servidor:
+  // solo se sirve lo que deja `npm run build` en dist/ (ver scripts/build-public.mjs).
+  "name": "barbecue-garage", // debe coincidir con el nombre del proyecto en Cloudflare
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

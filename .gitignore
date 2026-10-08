@@ -10,3 +10,7 @@ Thumbs.db
 # Compilación del panel (Next.js): se regenera sola, nunca se sube.
 # (Aparece también en la raíz porque el panel lee ../js/data/schema.js.)
 .next/
+
+# Carpeta que se publica (la genera `npm run build`; se regenera sola).
+/dist/
+.wrangler/

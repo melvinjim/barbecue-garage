@@ -239,6 +239,15 @@ npm test
 Cubren: validación de URLs y enlaces, esquema de datos, búsqueda, integridad de `menu.json`, que la CSP de
 `index.html` y `_headers` coincidan, y que el código no use APIs peligrosas.
 
+## Publicar el sitio público (Cloudflare)
+
+El repositorio guarda también el panel, las pruebas y herramientas locales; **nada de eso se publica**.
+`npm run build` copia a `dist/` solo lo público (lista cerrada en [`scripts/build-public.mjs`](scripts/build-public.mjs):
+las 4 páginas, `css/`, `js/`, `data/`, `assets/`, `robots.txt` y `_headers`) y `wrangler.jsonc` le dice a Cloudflare que
+sirva esa carpeta. En Cloudflare (Workers & Pages → importar desde GitHub): *Build command* `npm run build`, *Deploy
+command* `npx wrangler deploy`. Si se agrega una página o carpeta pública nueva, hay que sumarla a `PUBLIC_ENTRIES`
+(hay una prueba que avisa si algo sobra o falta). El panel (`admin/`) **no** se publica aquí: necesita servidor.
+
 ## Próximas etapas (acordadas, aún sin implementar)
 
 - **Panel administrativo** (en curso, carpeta [`admin/`](admin/README.md)): que el restaurante pueda añadir y quitar
