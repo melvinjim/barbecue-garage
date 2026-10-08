@@ -1,8 +1,10 @@
 import assert from 'node:assert/strict';
 import { test } from 'node:test';
 import {
+  adminHref,
   emailHref,
   googleMapsSearchUrl,
+  isLocalAdminHref,
   instagramHref,
   mapsHref,
   safeHref,
@@ -59,6 +61,36 @@ test('safeHref acepta las páginas del propio sitio y nada parecido', () => {
   for (const ok of ['index.html', 'carta.html', 'domicilios.html', 'index.html#sedes']) assert.equal(safeHref(ok), ok);
   for (const bad of ['carta-html', 'cartaXhtml', '../carta.html', '/carta.html', 'carta.html?x=1', 'a/b.html', 'carta.html#<script>', 'CARTA.html', '.html']) {
     assert.equal(safeHref(bad), null, `debería rechazar: ${bad}`);
+  }
+});
+
+test('adminHref: https sin puerto, o localhost con puerto; todo lo demás se rechaza', () => {
+  assert.equal(adminHref('https://admin.barbecuegarage.com'), 'https://admin.barbecuegarage.com/');
+  assert.equal(adminHref('http://localhost:3000'), 'http://localhost:3000');
+  assert.equal(adminHref(' http://localhost:3000/ '), 'http://localhost:3000/');
+  assert.equal(isLocalAdminHref('http://localhost:3000'), true);
+  assert.equal(isLocalAdminHref('https://admin.barbecuegarage.com/'), false);
+  assert.equal(safeHref('http://localhost:3000'), 'http://localhost:3000'); // el DOM también lo deja pasar
+
+  const bad = [
+    'javascript:alert(1)',
+    'http://evil.com',
+    'http://evil.com:3000',
+    'http://localhost.evil.com:3000',
+    'http://localhost:3000@evil.com',
+    'http://localhost@evil.com:3000',
+    'http://localhost:3000/../x',
+    'http://localhost:3000/admin',
+    'http://localhost',
+    'http://127.0.0.1:3000',
+    'https://user:pass@admin.example.com',
+    'ftp://localhost:3000',
+    null,
+    42,
+  ];
+  for (const value of bad) {
+    assert.equal(adminHref(value), null, `adminHref debería rechazar: ${String(value)}`);
+    if (typeof value === 'string' && value.startsWith('http://')) assert.equal(safeHref(value), null, `safeHref debería rechazar: ${value}`);
   }
 });
 

@@ -279,12 +279,6 @@
   text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
 }
 
-.hero__branch {
-  color: var(--red);
-  font-size: 0.42em;
-  letter-spacing: 0.22em;
-}
-
 .hero__lead {
   max-width: 46ch;
   color: var(--text-dim);
@@ -389,6 +383,16 @@
   color: var(--text);
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+/* Enlace al panel: se ve como el nombre de la marca, sin llamar la atención. */
+.site-footer__admin {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-footer__admin:hover strong {
+  text-decoration: underline;
 }
 
 .site-footer__legal {

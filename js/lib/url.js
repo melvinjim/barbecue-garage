@@ -32,10 +32,14 @@ export function sanitizeImageUrl(value) {
 
 export const isAllowedImageUrl = (value) => sanitizeImageUrl(value) !== null;
 
+// Panel administrativo en el computador de desarrollo: solo "localhost" con puerto, nada más.
+const LOCAL_ADMIN = /^http:\/\/localhost:\d{2,5}\/?$/;
+
 /** Hrefs permitidos en el DOM: ancla interna, tel:, mailto: o https. */
 export function safeHref(value) {
   if (typeof value !== 'string') return null;
   const v = value.trim();
+  if (LOCAL_ADMIN.test(v)) return v;
   if (/^#[A-Za-z0-9_-]{1,64}$/.test(v)) return v;
   // Páginas del propio sitio (carta.html, index.html#sedes…)
   if (/^[a-z0-9-]{1,30}\.html(?:#[A-Za-z0-9_-]{1,64})?$/.test(v)) return v;
@@ -91,6 +95,16 @@ export function googleMapsSearchUrl(query) {
 export function httpsHref(input) {
   return parseHttpsUrl(input)?.href ?? null;
 }
+
+/** Dirección del panel administrativo: https (sin puerto) o http://localhost:PUERTO para trabajar en local. */
+export function adminHref(input) {
+  if (typeof input !== 'string') return null;
+  const v = input.trim();
+  return LOCAL_ADMIN.test(v) ? v : httpsHref(v);
+}
+
+/** ¿Es la dirección local del panel? (no tiene sentido mostrarla a quien visita el sitio publicado) */
+export const isLocalAdminHref = (href) => typeof href === 'string' && LOCAL_ADMIN.test(href);
 
 export function instagramHref(handle) {
   const v = typeof handle === 'string' ? handle.trim().replace(/^@/, '') : '';

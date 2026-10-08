@@ -1,5 +1,6 @@
 import { LIMITS } from '../config.js';
 import {
+  adminHref,
   emailHref,
   facebookHref,
   googleMapsSearchUrl,
@@ -294,5 +295,6 @@ export function parseSite(raw) {
     hours: Object.freeze(hours),
     social: Object.freeze(social),
     reviewHref: typeof r.reviewUrl === 'string' ? httpsHref(r.reviewUrl) : null,
+    adminHref: adminHref(r.adminUrl),
   });
 }

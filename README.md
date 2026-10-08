@@ -199,6 +199,16 @@ solo si los configuras).
 Teléfonos, WhatsApp y redes se escriben como datos simples; el sitio construye los enlaces (así nadie puede colar una
 URL maliciosa por error). `mapsUrl` solo acepta Google Maps/Waze.
 
+### Enlace al panel administrativo
+
+El nombre de la marca en el pie de página enlaza al panel si `data/site.json` tiene `"adminUrl"`. Solo se acepta
+`https://…` (sin puerto) o `http://localhost:PUERTO`. La dirección `localhost` **solo se muestra cuando el sitio se abre
+desde el mismo computador**: a los visitantes del sitio publicado no les aparece (les llevaría a una página rota). Cuando
+el panel tenga dirección propia (por ejemplo `https://admin.tudominio.com`), cámbiala en `adminUrl` y se verá para todos.
+
+`"branch"` (texto de sede bajo el nombre) es opcional y hoy está vacío a propósito: la carta es la misma para las dos
+sedes. Si se escribe, aparece en el encabezado y el pie.
+
 ## Seguridad
 
 No hay servidor ni base de datos, así que no existe inyección SQL ni credenciales que robar. El riesgo real en un

@@ -1,5 +1,6 @@
 import { DEFAULT_LOGO } from '../config.js';
 import { h, icon } from '../lib/dom.js';
+import { isLocalAdminHref } from '../lib/url.js';
 
 // Encabezado y pie de página compartidos por todas las páginas.
 // Se dibujan desde aquí para que el menú de navegación viva en un solo lugar.
@@ -89,15 +90,35 @@ function renderHeader(page, site) {
   );
 }
 
+const LOCAL_HOSTS = Object.freeze(['localhost', '127.0.0.1', '[::1]']);
+
+/**
+ * Enlace al panel administrativo (site.adminUrl). La dirección local (localhost) solo se muestra cuando el sitio
+ * se abre desde el mismo computador: a quien visita el sitio publicado le llevaría a una página rota.
+ */
+function adminLinkFor(site) {
+  if (!site.adminHref) return null;
+  if (isLocalAdminHref(site.adminHref) && !LOCAL_HOSTS.includes(location.hostname)) return null;
+  return site.adminHref;
+}
+
 function renderFooter(site) {
   const footer = document.getElementById('site-footer');
   const name = site.name ?? 'Barbecue Garage';
+  const adminHref = adminLinkFor(site);
 
   footer.replaceChildren(
     h(
       'div',
       { class: 'container site-footer__inner' },
-      h('p', { class: 'site-footer__brand' }, h('strong', {}, name), site.branch ? ` · ${site.branch}` : ''),
+      h(
+        'p',
+        { class: 'site-footer__brand' },
+        adminHref
+          ? h('a', { class: 'site-footer__admin', href: adminHref, target: '_blank', title: 'Panel administrativo', 'aria-label': `${name}, panel administrativo` }, h('strong', {}, name))
+          : h('strong', {}, name),
+        site.branch ? ` · ${site.branch}` : '',
+      ),
       h(
         'nav',
         { class: 'site-footer__nav', 'aria-label': 'Secciones' },

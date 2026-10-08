@@ -167,3 +167,12 @@ test('parseSite rechaza enlaces peligrosos', () => {
   assert.equal(site.social.length, 0);
   assert.equal(site.reviewHref, null);
 });
+
+test('parseSite: adminUrl solo acepta https o el localhost del panel', () => {
+  assert.equal(parseSite({ adminUrl: 'http://localhost:3000' }).adminHref, 'http://localhost:3000');
+  assert.equal(parseSite({ adminUrl: 'https://admin.barbecuegarage.com' }).adminHref, 'https://admin.barbecuegarage.com/');
+  for (const bad of ['javascript:alert(1)', 'http://evil.com', '/admin', '', undefined, 7]) {
+    assert.equal(parseSite({ adminUrl: bad }).adminHref, null, String(bad));
+  }
+  assert.equal(parseSite(null).adminHref, null);
+});

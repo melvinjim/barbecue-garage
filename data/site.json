@@ -1,6 +1,5 @@
 {
   "name": "Barbecue Garage",
-  "branch": "Cra 21 · Le Meridiem Golf",
   "tagline": "Smoked burgers & meats",
   "description": "Burgers, hot dogs, sandwiches y cortes de carne al carbón, con ahumados de cocción lenta.",
   "logo": "https://images-mini.cluvi.com/JB2A91gDlj/thumb_JB2A91gDlj_x9cjkengze_logo-header.png",
@@ -38,5 +37,6 @@
     "facebook": "",
     "tiktok": ""
   },
-  "reviewUrl": ""
+  "reviewUrl": "",
+  "adminUrl": "http://localhost:3000"
 }
