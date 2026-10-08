@@ -1,7 +1,7 @@
 import { requireAdmin } from "../../lib/access.ts";
 import { categoryToValues } from "../../lib/form-values.ts";
 import { imageSrc } from "../../lib/image-src.ts";
-import { menuStore } from "../../lib/store.ts";
+import { PUBLISH_NOTE, menuStore } from "../../lib/store.ts";
 import { CategoryForm } from "../_components/category-form";
 import { Card, Notice, ghostButton } from "../_components/ui";
 import { deleteCategoryAction, moveCategoryAction } from "./actions";
@@ -36,7 +36,7 @@ export default async function CategoriesPage(props: PageProps<"/categorias">) {
       </p>
 
       <div className="mt-4 grid gap-3 empty:hidden">
-        {saved ? <Notice>Guardado: “{saved.name}”. Ya se ve en el sitio público.</Notice> : null}
+        {saved ? <Notice>Guardado: “{saved.name}”. {PUBLISH_NOTE}</Notice> : null}
         {first(params.resultado) === "eliminada" ? <Notice>Categoría eliminada.</Notice> : null}
         {error ? <Notice kind="error">{error}</Notice> : null}
       </div>

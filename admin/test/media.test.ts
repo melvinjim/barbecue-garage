@@ -5,6 +5,7 @@ import path from "node:path";
 import { test } from "node:test";
 import sharp from "sharp";
 import { MAX_UPLOAD_BYTES } from "../lib/image.ts";
+import { createLocalImageStore } from "../lib/image-store.ts";
 import { OWN_IMAGE_PATH, deleteImageIfUnused, isImageInUse, processImage, saveImage } from "../lib/media.ts";
 import type { RawMenu } from "../lib/menu-types.ts";
 import { UserFacingError } from "../lib/menu-types.ts";
@@ -64,14 +65,15 @@ test("processImage rechaza fotos demasiado pesadas", async () => {
 test("saveImage: guarda con nombre generado por el servidor, nunca el del archivo", async () => {
   const dir = await mkdtemp(path.join(tmpdir(), "bg-media-"));
   try {
-    const saved = await saveImage({ file: await bigJpegWithMetadata(), use: "product", label: "../../Gaucha Burger!!", dir });
+    const store = createLocalImageStore(dir);
+    const saved = await saveImage({ file: await bigJpegWithMetadata(), use: "product", label: "../../Gaucha Burger!!", store });
     assert.match(saved, OWN_IMAGE_PATH);
     assert.match(saved, /^assets\/menu\/gaucha-burger-[0-9a-f]{8}\.webp$/);
     assert.ok(await exists(path.join(dir, path.basename(saved))));
     assert.deepEqual((await readdir(dir)).length, 1);
     assert.equal((await sharp(await readFile(path.join(dir, path.basename(saved)))).metadata()).format, "webp");
 
-    const again = await saveImage({ file: await bigJpegWithMetadata(), use: "product", label: "Gaucha Burger", dir });
+    const again = await saveImage({ file: await bigJpegWithMetadata(), use: "product", label: "Gaucha Burger", store });
     assert.notEqual(again, saved, "dos subidas nunca se pisan");
   } finally {
     await rm(dir, { recursive: true, force: true });
@@ -99,20 +101,22 @@ test("deleteImageIfUnused: borra solo fotos propias que nadie usa", async () => 
     await writeFile(path.join(dir, "activa-bbbbbbbb.webp"), "x");
     await writeFile(path.join(dir, "secreto.txt"), "x");
 
-    await deleteImageIfUnused(inUse, menuWith(inUse), dir);
+    const store = createLocalImageStore(dir);
+
+    await deleteImageIfUnused(inUse, menuWith(inUse), store);
     assert.ok(await exists(path.join(dir, "activa-bbbbbbbb.webp")), "una foto en uso no se borra");
 
     // Rutas que NO son fotos del panel: jamás se tocan
     for (const strange of ["https://images.cluvi.com/a/b.jpg", "../secreto.txt", "assets/menu/../secreto.txt", "assets/otra/x.webp", "secreto.txt", "assets/menu/MAYUS.webp"]) {
-      await deleteImageIfUnused(strange, menuWith(), dir);
+      await deleteImageIfUnused(strange, menuWith(), store);
     }
     assert.ok(await exists(path.join(dir, "secreto.txt")));
 
-    await deleteImageIfUnused(own, menuWith(), dir);
+    await deleteImageIfUnused(own, menuWith(), store);
     assert.equal(await exists(path.join(dir, "vieja-aaaaaaaa.webp")), false, "la foto propia sin uso se borra");
 
-    await assert.doesNotReject(() => deleteImageIfUnused(own, menuWith(), dir), "borrar algo que ya no existe no falla");
-    await assert.doesNotReject(() => deleteImageIfUnused(undefined, menuWith(), dir));
+    await assert.doesNotReject(() => deleteImageIfUnused(own, menuWith(), store), "borrar algo que ya no existe no falla");
+    await assert.doesNotReject(() => deleteImageIfUnused(undefined, menuWith(), store));
   } finally {
     await rm(dir, { recursive: true, force: true });
   }

@@ -1,7 +1,5 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
 import { getAccess } from "../../../lib/access.ts";
-import { MENU_ASSETS_DIR } from "../../../lib/paths.ts";
+import { imageStore } from "../../../lib/store.ts";
 
 // Muestra en el panel las fotos propias de la carta (assets/menu/<nombre>.webp).
 //
@@ -19,7 +17,8 @@ export async function GET(_request: Request, context: RouteContext<"/media/[name
   if (!NAME.test(name)) return new Response("No encontrado", { status: 404 });
 
   try {
-    const data = await readFile(path.join(MENU_ASSETS_DIR, `${name}.webp`));
+    const data = await imageStore.get(`${name}.webp`);
+    if (!data) return new Response("No encontrado", { status: 404 });
     return new Response(new Uint8Array(data), {
       headers: {
         "Content-Type": "image/webp",
@@ -27,7 +26,8 @@ export async function GET(_request: Request, context: RouteContext<"/media/[name
         "X-Content-Type-Options": "nosniff",
       },
     });
-  } catch {
+  } catch (error) {
+    console.error("[admin] no se pudo leer una foto", error instanceof Error ? error.message : error);
     return new Response("No encontrado", { status: 404 });
   }
 }

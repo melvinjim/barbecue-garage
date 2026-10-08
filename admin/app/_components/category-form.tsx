@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import { saveCategoryAction } from "../categorias/actions";
+import { shrinkImage } from "../../lib/client-image";
 import { text, type FormValues } from "../../lib/form-values";
 import { Field, Notice, inputClass, primaryButton } from "./ui";
 
@@ -18,6 +19,7 @@ export function CategoryForm({ initial, categoryId, bannerPreview, idPrefix }: P
   const errors = state?.errors ?? {};
 
   const [chosenPreview, setChosenPreview] = useState<string>();
+  const [shrinking, setShrinking] = useState(false); // el banner se reduce antes de poder enviar el formulario
   useEffect(
     () => () => {
       if (chosenPreview) URL.revokeObjectURL(chosenPreview);
@@ -60,9 +62,22 @@ export function CategoryForm({ initial, categoryId, bannerPreview, idPrefix }: P
             type="file"
             accept="image/jpeg,image/png,image/webp,image/avif"
             className={`${inputClass} file:mr-3 file:rounded-full file:border-0 file:bg-brand file:px-4 file:py-1.5 file:font-semibold file:text-white`}
-            onChange={(event) => {
-              const file = event.currentTarget.files?.[0];
-              setChosenPreview(file ? URL.createObjectURL(file) : undefined);
+            onChange={async (event) => {
+              const input = event.currentTarget; // se guarda antes del await: después React ya no lo entrega
+              const file = input.files?.[0];
+              if (!file) return setChosenPreview(undefined);
+              setShrinking(true);
+              try {
+                const smaller = await shrinkImage(file);
+                if (smaller !== file) {
+                  const transfer = new DataTransfer();
+                  transfer.items.add(smaller);
+                  input.files = transfer.files;
+                }
+                setChosenPreview(URL.createObjectURL(smaller));
+              } finally {
+                setShrinking(false);
+              }
             }}
             aria-invalid={Boolean(errors.bannerFile)}
           />
@@ -76,8 +91,8 @@ export function CategoryForm({ initial, categoryId, bannerPreview, idPrefix }: P
       </div>
 
       <div>
-        <button type="submit" className={primaryButton} disabled={pending}>
-          {pending ? "Guardando…" : categoryId ? "Guardar categoría" : "Crear categoría"}
+        <button type="submit" className={primaryButton} disabled={pending || shrinking}>
+          {pending ? "Guardando…" : shrinking ? "Preparando la foto…" : categoryId ? "Guardar categoría" : "Crear categoría"}
         </button>
       </div>
     </form>

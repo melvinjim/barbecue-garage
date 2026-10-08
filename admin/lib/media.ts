@@ -1,8 +1,7 @@
 import { randomBytes } from "node:crypto";
-import { mkdir, rm, writeFile } from "node:fs/promises";
-import path from "node:path";
 import sharp from "sharp";
 import { MAX_UPLOAD_BYTES, OWN_IMAGE_PATH, detectImageKind } from "./image.ts";
+import type { ImageStore } from "./image-store.ts";
 import type { RawMenu } from "./menu-types.ts";
 import { ImageError } from "./menu-types.ts";
 import { slugify } from "./slug.ts";
@@ -43,23 +42,23 @@ export async function processImage(input: Uint8Array, use: ImageKindOfUse): Prom
 }
 
 /** Ruta pública (la que se guarda en menu.json) a partir de un nombre de archivo del servidor. */
-const publicPath = (fileName: string) => `assets/menu/${fileName}`;
+const PUBLIC_PREFIX = "assets/menu/";
+const publicPath = (fileName: string) => `${PUBLIC_PREFIX}${fileName}`;
 
 export { OWN_IMAGE_PATH };
 
 /**
- * Procesa y guarda una foto en `dir`. Devuelve la ruta pública (p. ej. "assets/menu/gaucha-burger-1a2b3c4d.webp").
+ * Procesa y guarda una foto en `store`. Devuelve la ruta pública (p. ej. "assets/menu/gaucha-burger-1a2b3c4d.webp").
  */
 export async function saveImage(options: {
   file: Uint8Array;
   use: ImageKindOfUse;
   label: string; // para el nombre del archivo (se pasa por slugify)
-  dir: string;
+  store: ImageStore;
 }): Promise<string> {
   const data = await processImage(options.file, options.use);
   const fileName = `${slugify(options.label, 40)}-${randomBytes(4).toString("hex")}.webp`;
-  await mkdir(options.dir, { recursive: true });
-  await writeFile(path.join(options.dir, fileName), data);
+  await options.store.put(fileName, data);
   return publicPath(fileName);
 }
 
@@ -72,12 +71,10 @@ export function isImageInUse(imagePath: string, menu: RawMenu): boolean {
 }
 
 /**
- * Borra del disco una foto que ya nadie usa. Solo toca archivos con la forma exacta de las fotos
- * del panel; jamás una URL externa ni una ruta que alguien haya escrito a mano.
+ * Borra una foto que ya nadie usa. Solo toca archivos con la forma exacta de las fotos del panel
+ * (OWN_IMAGE_PATH); jamás una URL externa ni una ruta que alguien haya escrito a mano.
  */
-export async function deleteImageIfUnused(imagePath: string | undefined, menu: RawMenu, dir: string): Promise<void> {
+export async function deleteImageIfUnused(imagePath: string | undefined, menu: RawMenu, store: ImageStore): Promise<void> {
   if (!imagePath || !OWN_IMAGE_PATH.test(imagePath) || isImageInUse(imagePath, menu)) return;
-  const target = path.resolve(dir, path.basename(imagePath));
-  if (path.dirname(target) !== path.resolve(dir)) return; // defensa extra contra rutas raras
-  await rm(target, { force: true });
+  await store.remove(imagePath.slice(PUBLIC_PREFIX.length)); // OWN_IMAGE_PATH garantiza que solo queda "<nombre>.webp"
 }

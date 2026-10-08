@@ -1,6 +1,6 @@
 import { requireAdmin } from "../../lib/access.ts";
 import { imageSrc } from "../../lib/image-src.ts";
-import { menuStore } from "../../lib/store.ts";
+import { PUBLISH_NOTE, menuStore } from "../../lib/store.ts";
 import { Notice, formatCop, ghostButton, inputClass, primaryButton } from "../_components/ui";
 
 const first = (value: string | string[] | undefined) => (Array.isArray(value) ? value[0] : value) ?? "";
@@ -51,7 +51,7 @@ export default async function ProductsPage(props: PageProps<"/productos">) {
       </div>
 
       <div className="mt-4 grid gap-3 empty:hidden">
-        {savedProduct ? <Notice>Guardado: “{savedProduct.name}”. Ya se ve en el sitio público.</Notice> : null}
+        {savedProduct ? <Notice>Guardado: “{savedProduct.name}”. {PUBLISH_NOTE}</Notice> : null}
         {result ? <Notice kind={result.kind}>{result.text}</Notice> : null}
       </div>
 

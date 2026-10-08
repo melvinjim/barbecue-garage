@@ -44,6 +44,56 @@ Cada cambio se ve al instante en el sitio público (que lee el mismo `data/menu.
 En Windows: doble clic en **`iniciar-panel.bat`** (en la raíz del proyecto) → <http://localhost:3000>.
 O desde una terminal: `cd admin && npm run dev`.
 
+## Publicar el panel en internet (Vercel + GitHub)
+
+El panel guarda **donde le digan las variables de entorno** (`lib/store.ts`):
+
+| Variables | Dónde guarda | Cuándo |
+|---|---|---|
+| `GITHUB_TOKEN` + `GITHUB_REPO` vacías | Archivos de tu computador (`../data/menu.json`, `../assets/menu`) | Desarrollo |
+| Las tres definidas | **Commits en GitHub** (`lib/github.ts`, `lib/github-store.ts`) | Producción |
+
+En producción cada guardado es un commit en el repositorio; como Cloudflare publica el sitio desde ese repositorio, en
+1–2 minutos el cambio se ve en la página pública. El historial de Git es el respaldo (se puede volver a cualquier versión).
+Si dos personas guardan a la vez, GitHub rechaza la segunda escritura y el panel vuelve a leer y reaplica el cambio, así
+nadie pisa el trabajo de otra persona. Si defines solo una de las dos (`GITHUB_TOKEN` o `GITHUB_REPO`), el panel se
+niega a arrancar y te lo dice (así no queda a medias).
+
+**1. Token de GitHub** (lo creas tú): GitHub → *Settings → Developer settings → Personal access tokens → Fine-grained
+tokens → Generate*. *Repository access:* **Only select repositories → barbecue-garage**. *Permissions → Repository
+permissions → Contents: Read and write*. Cópialo una vez (no se vuelve a mostrar) y ponle una fecha de vencimiento que
+te acuerdes de renovar. Con ese token **solo** se puede leer/escribir contenido de ese repositorio.
+
+**2. Proyecto en Vercel:** *Import → barbecue-garage → admin*. Ajustes:
+- *Root Directory:* `admin`. Deja activado *Include source files outside of the Root Directory* (el panel usa
+  `../js/data/schema.js` para validar con las mismas reglas del sitio).
+- *Environment Variables* (marca `CLERK_SECRET_KEY` y `GITHUB_TOKEN` como **Sensitive**):
+
+| Variable | Valor |
+|---|---|
+| `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` / `CLERK_SECRET_KEY` | las de `.env.local` (Clerk) |
+| `NEXT_PUBLIC_CLERK_SIGN_IN_URL` / `NEXT_PUBLIC_CLERK_SIGN_UP_URL` | `/sign-in` y `/sign-up` |
+| `ADMIN_ORG_ID` | el `org_…` de la organización del restaurante |
+| `GITHUB_TOKEN` | el token del paso 1 |
+| `GITHUB_REPO` | `melvinjim/barbecue-garage` |
+| `GITHUB_BRANCH` | `main` |
+
+- *Settings → Git → Ignored Build Step* (para que cada guardado del panel no vuelva a desplegar el panel):
+  `git diff --quiet HEAD^ HEAD -- . ../js` (si solo cambió `data/` o `assets/`, no se despliega).
+
+**3. Clerk:** con las llaves de desarrollo el panel funciona en la dirección `*.vercel.app` (con los límites de una
+instancia de desarrollo). Para producción de verdad hace falta un dominio propio y `npx clerk@latest deploy`.
+
+**4. Enlace desde el sitio:** pon la dirección del panel en `data/site.json` → `"adminUrl": "https://….vercel.app"`
+(el nombre de la marca en el pie de página enlazará ahí).
+
+Límites a tener en cuenta:
+- Vercel acepta envíos de hasta ~4,5 MB: por eso el navegador **reduce las fotos pesadas antes de subirlas**
+  (`lib/client-image.ts`). Aun así el servidor las vuelve a validar y limpiar (`lib/media.ts`).
+- El plan *Hobby* de Vercel es solo para uso no comercial: sirve para una demostración, no para el negocio real.
+- Esta ruta (GitHub + Vercel) está probada con pruebas automáticas contra un GitHub simulado; **la conexión real con
+  GitHub y Vercel se verifica la primera vez que se despliega**.
+
 ## Primera configuración (una sola vez)
 
 1. Abre <http://localhost:3000> y **crea tu cuenta** (la crea Clerk; el panel nunca guarda contraseñas).
@@ -73,8 +123,9 @@ fija (nunca se imprime texto tomado de la dirección) y los registros `[admin]` 
 
 ## Pruebas
 
-`npm test` (en `admin/`): 29 pruebas de la lógica del editor (ids, reconocimiento de imágenes, formularios, guardado
-con validación/concurrencia/copias, procesado de fotos). Desde la raíz, `node --test` corre todas (85).
+`npm test` (en `admin/`): 41 pruebas de la lógica del editor (ids, reconocimiento de imágenes, formularios, guardado
+con validación/concurrencia/copias, procesado de fotos y guardado en GitHub contra un GitHub simulado: conflictos,
+reintentos, rutas permitidas y que el token nunca aparezca en un error). Desde la raíz, `node --test` corre todas.
 
 ## Clerk
 
@@ -88,10 +139,9 @@ con validación/concurrencia/copias, procesado de fotos). Desde la raíz, `node 
 
 - Banners/ventana promocional "Inicia tu experiencia con:" y edición de sedes/horarios/redes (`site.json`).
 - Reordenar productos dentro de una categoría (hoy salen en el orden en que están en el archivo; los nuevos van al final).
-- **Dónde se guardan los datos en producción.** Hoy el panel escribe `../data/menu.json` y `../assets/menu/` en el
-  disco (sirve en tu computador o en un servidor propio con disco). En un hosting como Vercel el disco es de solo
-  lectura: habrá que cambiar el almacenamiento por una base de datos / almacenamiento de archivos. Está aislado en
-  `lib/menu-store.ts` (datos) y `lib/media.ts` (fotos), así que el cambio no toca las pantallas.
+- Probar el guardado en GitHub con un token real (hoy solo está probado contra un GitHub simulado).
+- Alternativa más barata a Vercel Pro para producción: un servidor propio (~5 USD) o Cloudflare Workers (exige Next 15
+  y reemplazar `sharp`). El almacenamiento ya está separado (`MenuStore` / `ImageStore`), así que el cambio no toca las pantallas.
 - Textos de Clerk en español (`@clerk/localizations`) y política CSP estricta con nonces.
 - Las 5 alertas "high" de `npm audit` son de herramientas de desarrollo (ESLint) y no llegan a producción
   (`npm audit --omit=dev` = 0). No ejecutes `npm audit fix --force`.

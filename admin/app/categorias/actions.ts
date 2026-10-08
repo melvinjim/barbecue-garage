@@ -10,9 +10,8 @@ import { deleteImageIfUnused, saveImage } from "../../lib/media.ts";
 import { buildCategory, oneLine, parseCategoryForm } from "../../lib/menu-form.ts";
 import { MenuValidationError } from "../../lib/menu-store.ts";
 import { ImageError, UserFacingError } from "../../lib/menu-types.ts";
-import { MENU_ASSETS_DIR } from "../../lib/paths.ts";
 import { slugify, uniqueId } from "../../lib/slug.ts";
-import { menuStore } from "../../lib/store.ts";
+import { imageStore, menuStore } from "../../lib/store.ts";
 import { readUpload } from "../../lib/upload.ts";
 
 function describe(error: unknown): string {
@@ -44,7 +43,7 @@ export async function saveCategoryAction(_previous: FormState, formData: FormDat
     if (!parsed.ok) return fail("Revisa los campos marcados en rojo.", parsed.errors);
 
     const upload = await readUpload(formData, "bannerFile");
-    if (upload) newBanner = await saveImage({ file: upload, use: "banner", label: `banner-${parsed.value.name}`, dir: MENU_ASSETS_DIR });
+    if (upload) newBanner = await saveImage({ file: upload, use: "banner", label: `banner-${parsed.value.name}`, store: imageStore });
     const removeBanner = formData.get("removeBanner") === "on";
 
     try {
@@ -63,13 +62,13 @@ export async function saveCategoryAction(_previous: FormState, formData: FormDat
         if (index === -1) menu.categories.push(category);
         else menu.categories[index] = category;
         return id;
-      });
+      }, `${editingId ? "editar" : "crear"} categoría ${parsed.value.name}`);
     } catch (error) {
-      if (newBanner) await deleteImageIfUnused(newBanner, await menuStore.read(), MENU_ASSETS_DIR);
+      if (newBanner) await deleteImageIfUnused(newBanner, await menuStore.read(), imageStore);
       throw error;
     }
 
-    if (oldBanner && oldBanner !== finalBanner) await deleteImageIfUnused(oldBanner, await menuStore.read(), MENU_ASSETS_DIR);
+    if (oldBanner && oldBanner !== finalBanner) await deleteImageIfUnused(oldBanner, await menuStore.read(), imageStore);
     console.info("[admin]", editingId ? "categoría editada" : "categoría creada", { id: savedId, por: access.userId });
   } catch (error) {
     return fail(describe(error), error instanceof ImageError ? { bannerFile: error.message } : undefined);
@@ -91,7 +90,7 @@ export async function moveCategoryAction(formData: FormData): Promise<void> {
       const to = from + step;
       if (from === -1 || to < 0 || to >= menu.categories.length) return; // ya está en el borde: no hay nada que mover
       [menu.categories[from], menu.categories[to]] = [menu.categories[to], menu.categories[from]];
-    });
+    }, `mover categoría ${id}`);
     console.info("[admin] categoría movida", { id, paso: step, por: access.userId });
   } catch (error) {
     outcome = "error";
@@ -115,8 +114,8 @@ export async function deleteCategoryAction(formData: FormData): Promise<void> {
       if (menu.products.some((product) => product.categories.includes(id))) throw new UserFacingError("en-uso");
       oldBanner = menu.categories[index].banner;
       menu.categories.splice(index, 1);
-    });
-    await deleteImageIfUnused(oldBanner, await menuStore.read(), MENU_ASSETS_DIR);
+    }, `eliminar categoría ${id}`);
+    await deleteImageIfUnused(oldBanner, await menuStore.read(), imageStore);
     console.info("[admin] categoría eliminada", { id, por: access.userId });
   } catch (error) {
     outcome = error instanceof UserFacingError ? error.message : "guardar";

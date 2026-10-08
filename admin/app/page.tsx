@@ -1,5 +1,5 @@
 import { requireAdmin } from "../lib/access.ts";
-import { menuStore } from "../lib/store.ts";
+import { PUBLISH_NOTE, menuStore } from "../lib/store.ts";
 
 export default async function DashboardPage() {
   await requireAdmin(); // cada página del panel verifica el acceso por sí misma
@@ -11,7 +11,7 @@ export default async function DashboardPage() {
   return (
     <main className="mx-auto w-full max-w-4xl flex-1 px-4 py-10">
       <h1 className="text-3xl font-bold uppercase tracking-wide">Panel administrativo</h1>
-      <p className="mt-2 text-muted">Edita la carta: los cambios se ven al instante en el sitio público.</p>
+      <p className="mt-2 text-muted">Edita la carta. {PUBLISH_NOTE}</p>
 
       <section className="mt-8 grid gap-4 sm:grid-cols-3" aria-label="Resumen de la carta">
         {[

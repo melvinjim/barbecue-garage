@@ -13,8 +13,18 @@ import type { RawMenu } from "./menu-types.ts";
 //  4. La escritura es atómica: se escribe un archivo temporal y se renombra, así el sitio
 //     público nunca lee un archivo a medias.
 //
-// Esta es la implementación local (archivos). Para producción se reemplazaría por una base de
-// datos o almacenamiento en la nube manteniendo esta misma interfaz { read, update }.
+// Esta es la implementación local (archivos). En producción se usa github-store.ts, que cumple
+// la misma interfaz `MenuStore` ({ read, update }) y guarda la carta como commits en GitHub.
+
+/** Lo que el panel necesita de "donde se guarda la carta". */
+export type MenuStore = {
+  read(): Promise<RawMenu>;
+  /**
+   * Aplica `mutator` sobre una copia de la carta; si queda válida, la guarda. Devuelve lo que devuelva `mutator`.
+   * `note` describe el cambio (en GitHub se usa como mensaje del commit).
+   */
+  update<T>(mutator: (menu: RawMenu) => T | Promise<T>, note?: string): Promise<T>;
+};
 
 export class MenuValidationError extends Error {
   readonly problems: string[];
@@ -44,7 +54,7 @@ export function assertValidMenu(menu: RawMenu): void {
 
 type StoreOptions = { dataFile: string; backupDir: string; maxBackups?: number };
 
-export function createMenuStore({ dataFile, backupDir, maxBackups = 30 }: StoreOptions) {
+export function createMenuStore({ dataFile, backupDir, maxBackups = 30 }: StoreOptions): MenuStore {
   let queue: Promise<unknown> = Promise.resolve();
 
   async function read(): Promise<RawMenu> {
@@ -73,7 +83,6 @@ export function createMenuStore({ dataFile, backupDir, maxBackups = 30 }: StoreO
     }
   }
 
-  /** Aplica `mutator` sobre una copia de la carta; si queda válida, la guarda. Devuelve lo que devuelva `mutator`. */
   function update<T>(mutator: (menu: RawMenu) => T | Promise<T>): Promise<T> {
     const run = async () => {
       const previous = await readFile(dataFile, "utf8");
@@ -91,5 +100,3 @@ export function createMenuStore({ dataFile, backupDir, maxBackups = 30 }: StoreO
 
   return { read, update };
 }
-
-export type MenuStore = ReturnType<typeof createMenuStore>;

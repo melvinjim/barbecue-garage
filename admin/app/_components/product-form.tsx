@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useState } from "react";
 import { saveProductAction } from "../productos/actions";
+import { shrinkImage } from "../../lib/client-image";
 import { list, text, type FormValues } from "../../lib/form-values";
 import { Card, Field, Notice, ghostButton, inputClass, primaryButton } from "./ui";
 
@@ -24,6 +25,7 @@ export function ProductForm({ categories, initial, productId, imagePreview, reco
 
   // Vista previa de la foto elegida (antes de guardar)
   const [chosenPreview, setChosenPreview] = useState<string>();
+  const [shrinking, setShrinking] = useState(false); // la foto se reduce antes de poder enviar el formulario
   useEffect(
     () => () => {
       if (chosenPreview) URL.revokeObjectURL(chosenPreview);
@@ -140,9 +142,22 @@ export function ProductForm({ categories, initial, productId, imagePreview, reco
             type="file"
             accept="image/jpeg,image/png,image/webp,image/avif"
             className={`${inputClass} file:mr-3 file:rounded-full file:border-0 file:bg-brand file:px-4 file:py-1.5 file:font-semibold file:text-white`}
-            onChange={(event) => {
-              const file = event.currentTarget.files?.[0];
-              setChosenPreview(file ? URL.createObjectURL(file) : undefined);
+            onChange={async (event) => {
+              const input = event.currentTarget; // se guarda antes del await: después React ya no lo entrega
+              const file = input.files?.[0];
+              if (!file) return setChosenPreview(undefined);
+              setShrinking(true);
+              try {
+                const smaller = await shrinkImage(file);
+                if (smaller !== file) {
+                  const transfer = new DataTransfer();
+                  transfer.items.add(smaller);
+                  input.files = transfer.files;
+                }
+                setChosenPreview(URL.createObjectURL(smaller));
+              } finally {
+                setShrinking(false);
+              }
             }}
             aria-invalid={Boolean(errors.imageFile)}
           />
@@ -156,8 +171,8 @@ export function ProductForm({ categories, initial, productId, imagePreview, reco
       </Card>
 
       <div className="flex flex-wrap items-center gap-3">
-        <button type="submit" className={primaryButton} disabled={pending}>
-          {pending ? "Guardando…" : productId ? "Guardar cambios" : "Crear producto"}
+        <button type="submit" className={primaryButton} disabled={pending || shrinking}>
+          {pending ? "Guardando…" : shrinking ? "Preparando la foto…" : productId ? "Guardar cambios" : "Crear producto"}
         </button>
         <a href="/productos" className={ghostButton}>Cancelar</a>
       </div>

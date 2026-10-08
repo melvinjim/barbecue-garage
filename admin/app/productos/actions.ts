@@ -10,9 +10,8 @@ import { deleteImageIfUnused, saveImage } from "../../lib/media.ts";
 import { buildProduct, oneLine, parseProductForm } from "../../lib/menu-form.ts";
 import { MenuValidationError } from "../../lib/menu-store.ts";
 import { ImageError, UserFacingError } from "../../lib/menu-types.ts";
-import { MENU_ASSETS_DIR } from "../../lib/paths.ts";
 import { slugify, uniqueId } from "../../lib/slug.ts";
-import { menuStore } from "../../lib/store.ts";
+import { imageStore, menuStore } from "../../lib/store.ts";
 import { readUpload } from "../../lib/upload.ts";
 
 // Acciones del servidor para productos. Reglas:
@@ -47,7 +46,7 @@ export async function saveProductAction(_previous: FormState, formData: FormData
     const { fields, recommended } = parsed.value;
 
     const upload = await readUpload(formData, "imageFile");
-    if (upload) newImage = await saveImage({ file: upload, use: "product", label: fields.name, dir: MENU_ASSETS_DIR });
+    if (upload) newImage = await saveImage({ file: upload, use: "product", label: fields.name, store: imageStore });
     const removeImage = formData.get("removeImage") === "on";
 
     try {
@@ -77,15 +76,15 @@ export async function saveProductAction(_previous: FormState, formData: FormData
           menu.recommended = menu.recommended.filter((recommendedId) => recommendedId !== id);
         }
         return id;
-      });
+      }, `${editingId ? "editar" : "crear"} producto ${fields.name}`);
     } catch (error) {
       // No se guardó: la foto recién subida quedaría huérfana.
-      if (newImage) await deleteImageIfUnused(newImage, await menuStore.read(), MENU_ASSETS_DIR);
+      if (newImage) await deleteImageIfUnused(newImage, await menuStore.read(), imageStore);
       throw error;
     }
 
-    // Guardado: si la foto anterior ya no se usa en ningún lado, se borra del disco.
-    if (oldImage && oldImage !== finalImage) await deleteImageIfUnused(oldImage, await menuStore.read(), MENU_ASSETS_DIR);
+    // Guardado: si la foto anterior ya no se usa en ningún lado, se borra.
+    if (oldImage && oldImage !== finalImage) await deleteImageIfUnused(oldImage, await menuStore.read(), imageStore);
     console.info("[admin]", editingId ? "producto editado" : "producto creado", { id: savedId, por: access.userId });
   } catch (error) {
     return fail(describe(error), error instanceof ImageError ? { imageFile: error.message } : undefined);
@@ -109,8 +108,8 @@ export async function deleteProductAction(formData: FormData): Promise<void> {
       oldImage = menu.products[index].image;
       menu.products.splice(index, 1);
       menu.recommended = menu.recommended.filter((recommendedId) => recommendedId !== id);
-    });
-    await deleteImageIfUnused(oldImage, await menuStore.read(), MENU_ASSETS_DIR);
+    }, `eliminar producto ${id}`);
+    await deleteImageIfUnused(oldImage, await menuStore.read(), imageStore);
     console.info("[admin] producto eliminado", { id, por: access.userId });
   } catch (error) {
     outcome = error instanceof UserFacingError ? "ya-no-existe" : "error";
