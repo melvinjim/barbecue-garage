@@ -38,5 +38,5 @@
     "tiktok": ""
   },
   "reviewUrl": "",
-  "adminUrl": "http://localhost:3000"
+  "adminUrl": "https://barbecue-garage.vercel.app"
 }
